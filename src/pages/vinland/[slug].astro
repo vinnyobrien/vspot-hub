@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import { regions } from '../../data/vinland.js';
+export function getStaticPaths() {
+  return regions.flatMap(r => r.essays.map(e => ({ params: { slug: e.slug }, props: { essay: e, region: r } })));
+}
+const { essay, region } = Astro.props;
+const migrating = essay.status.includes('Substack') || essay.status.includes('igrating');
+---
+<Base title={`${essay.title} — VINLAND | The V Spot Network`} description={essay.teaser} type="Article">
+  <main class="wrap page">
+    <p class="kicker">VINLAND · {region.name}</p>
+    <h1>{essay.title}</h1>
+    <p>{essay.teaser}</p>
+    {migrating
+      ? <p class="muted">This territory has been claimed and its permanent address is the page you're on. The full essay is moving in from the archive as part of the VINLAND migration. In the meantime, the original lives in <a href="https://vinnyobrien.substack.com/archive">the Substack archive</a>, and this URL is the one to cite, share, and bookmark.</p>
+      : <p class="muted">Commissioned and in the works. This URL is permanent; the essay arrives here first.</p>}
+    <p class="muted" style="margin-top:26px"><a href="/vinland/">← Back to the map</a></p>
+  </main>
+</Base>

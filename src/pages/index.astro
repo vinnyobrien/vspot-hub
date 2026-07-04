@@ -1,0 +1,95 @@
+---
+import Base from '../layouts/Base.astro';
+const shows = [
+  { href: '/shows/nearly-news/', name: 'Nearly News', time: 'Weekly · Video', accent: '#E8272A', desc: 'The ecommerce news round-up, seen through the eyes of a madman. Everything is true except the bits that are funnier.', status: 'On air', img: '/brand/still-nearlynews.jpg', alt: 'The Nearly News desk, on air' },
+  { href: '/shows/ostrich-report/', name: 'The Ostrich Report', time: 'Long-form · Editorial', accent: '#D2B48C', desc: 'Heads out of the sand. Deep essays on the infrastructure of commerce, with Hendrik Laubscher.', status: 'Publishing', img: '/brand/still-ostrich.jpg', alt: 'The Ostrich Report anchor at his desk' },
+  { href: '/shows/struggle-bus/', name: 'The Struggle Bus', time: 'Podcast · Operators', accent: '#D2B48C', desc: 'Real talk, real stories, real struggles. All aboard, mind the gap between plan and reality.', status: 'On air', img: '/brand/still-bus.jpg', alt: 'The Struggle Bus outside the stage door in the rain' },
+  { href: '/shows/saturday-satire/', name: 'Saturday Satire', time: 'Saturdays · Video', accent: '#ff4d6d', desc: 'The week in commerce, roasted gently over a red neon flame.', status: 'In development', img: '/brand/still-satire.jpg', alt: 'The Saturday Satire stage between shows' },
+  { href: '/shows/sunday-supplement/', name: 'The Sunday Supplement', time: 'Sundays · Guests', accent: '#D2B48C', desc: 'Guests and marketing minds. Balanced lighting, unbalanced opinions.', status: 'In development', img: '/brand/still-supplement.jpg', alt: 'The Sunday Supplement interview chairs' },
+  { href: '/vinland/', name: 'VINLAND', time: 'Always on · Essays', accent: '#A0A0A0', desc: 'The map of standalone editorial art-objects. Friction as Currency lives here.', status: 'Migrating in', img: '/brand/vinland-map.jpg', alt: 'A candlelit map of Kerry with a red pin on Tralee' },
+];
+const headlines = [
+  '<b>BREAKING:</b> Retailer discovers customers had feelings all along, analysts stunned',
+  '<b>DEVELOPING:</b> EU announces regulation. Industry announces surprise. Nobody is surprised.',
+  '<b>MARKETS:</b> Q4 forecast revised upward after someone finally read the Q3 numbers',
+  '<b>TECH:</b> Agentic shopping bots now negotiating with each other, allegedly about us',
+  '<b>RETAIL:</b> Supply chain described as resilient by man visibly holding duct tape',
+  '<b>EXCLUSIVE:</b> Free shipping revealed to have never, at any point, been free',
+];
+const reel = headlines.map(h => `<span>${h}</span>`).join('');
+---
+<Base title="The V Spot Network — Ecommerce, Retail & AI, Cross-Atlantic" description="Late-night energy for the commerce industry: The Ostrich Report, The Struggle Bus, Nearly News, and Vinny O'Brien's essays on ecommerce, retail, and AI.">
+  <div class="ticker" aria-hidden="true">
+    <span class="live">ON AIR</span>
+    <div class="feed"><div class="reel" set:html={reel + reel} /></div>
+  </div>
+  <div class="bulbs" aria-hidden="true"></div>
+  <header class="masthead">
+    <div class="wrap">
+      <p class="eyebrow">Live from Tralee · It's...</p>
+      <h1 class="neon">THE V SPOT</h1>
+      <p class="withline">with Vinny O'Brien</p>
+      <p class="tagline">A V Spot Network Production</p>
+      <p class="sub">Ecommerce, retail, and AI with a cross-Atlantic squint. Satirical on the surface, analyst-grade underneath.</p>
+    </div>
+  </header>
+  <div class="bulbs" aria-hidden="true"></div>
+  <div class="herofilm">
+    <img src="/brand/hero-backlot.jpg" alt="V Spot Studios backlot at night: the theatre marquee, searchlights, and the blimp" width="2000" height="1125" fetchpriority="high" />
+    <div class="heroslate">V Spot Studios · Backlot, dusk<small>The blimp is non-negotiable</small></div>
+  </div>
+  </div>
+  <main class="wrap">
+    <p class="grid-label">Tonight's programming</p>
+    <div class="programming">
+      {shows.map(s => (
+        <a class="slot" href={s.href} style={`--accent:${s.accent}`}>
+          {s.img
+            ? <div class="art"><img src={s.img} alt={s.alt} loading="lazy" width="800" height="450" /></div>
+            : <div class="art empty">Coming soon</div>}
+          <div class="body">
+            <span class="time">{s.time}</span>
+            <h3>{s.name}</h3>
+            <p>{s.desc}</p>
+            <span class="status">{s.status}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+    <p class="grid-label">The monologue</p>
+    <div class="monologue">
+      <div class="cue"><span class="cuetag">Cue card 01</span>Amazon says its new shopping agent knows what you want before you do. So does my mother, and she doesn't need a data centre in Virginia.</div>
+      <div class="cue"><span class="cuetag">Cue card 02</span>A retailer announced "frictionless returns" this week. The friction isn't gone, folks. It's just been promoted to work in the warehouse.</div>
+      <div class="cue"><span class="cuetag">Cue card 03</span>The EU fined a marketplace four hundred million euro on Tuesday. Or as the marketplace's finance team calls it, "Tuesday."</div>
+    </div>
+    <p class="grid-label">On location</p>
+    <div class="locations">
+      <div class="loc"><img src="/brand/loc-nyc.jpg" alt="New York skyline at night" loading="lazy" width="1024" height="656" /><div class="slate">New York · The Other Desk<small>Where half the stories happen</small></div></div>
+      <div class="loc"><img src="/brand/loc-kerry.jpg" alt="A winding road through the Kerry mountains at night" loading="lazy" width="753" height="276" /><div class="slate">County Kerry · The Commute<small>One road, no traffic, allegedly</small></div></div>
+      <div class="loc"><img src="/brand/loc-mic.jpg" alt="Vintage microphone graded in navy and brass" loading="lazy" width="959" height="1024" /><div class="slate">The Monologue Mic<small>Photo: RichardBowen, CC BY</small></div></div>
+    </div>
+    <p class="grid-label">Your host</p>
+    <div class="host">
+      <img src="/brand/vinny-nrf.jpg" alt="Vinny O'Brien speaking at NRF in New York" loading="lazy" width="733" height="1100" />
+      <div>
+        <h3>with Vinny O'Brien</h3>
+        <p>Fifteen-plus years in ecommerce operations and consulting, one foot in Tralee and one in New York, and a firm belief that technology should amplify empathy, not just remove friction. Some friction is the product. He will explain this at length whether you ask or not.</p>
+        <a class="cta" href="/about/">Meet the host</a>
+      </div>
+    </div>
+    <p class="grid-label">From the agency</p>
+    <div class="host">
+      <img src="/brand/murt.jpg" alt="Murt Moriarty, talent agent, on the phone at his cluttered desk" loading="lazy" width="1800" height="999" />
+      <div>
+        <h3>Murt Moriarty</h3>
+        <p>The kid's agent. Handles bookings, sponsorships, and two telephones simultaneously, with mixed results. Murt describes this website as "the deal of my career, which my client insists he built with a computer. Sure."</p>
+        <a class="cta" href="/book/">Book a call through Murt</a>
+      </div>
+    </div>
+    <p class="grid-label nowshowing">Now showing</p>
+    <div class="frame">
+      <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLl9ucTo9RN_eLVUcUt0zqVz-RSkcfV1d5" title="The V Spot Network on YouTube" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div style="height:72px"></div>
+  </main>
+</Base>

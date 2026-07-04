@@ -1,0 +1,173 @@
+---
+// The V Spot Studios backlot: satirical ecommerce cityscape, Silicon Valley title
+// sequence energy on a late-night Hollywood lot. Pure SVG, brand palette only.
+---
+<div class="backlot" aria-label="The V Spot Studios backlot: a satirical ecommerce cityscape at night">
+<svg viewBox="0 0 1600 430" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" role="img">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A0A0A"/><stop offset=".55" stop-color="#131736"/><stop offset="1" stop-color="#1A1F3C"/>
+    </linearGradient>
+    <linearGradient id="beamg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5E2B8" stop-opacity=".28"/><stop offset="1" stop-color="#F5E2B8" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="marqueeglow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#E8272A" stop-opacity=".5"/><stop offset="1" stop-color="#E8272A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- sky -->
+  <rect width="1600" height="430" fill="url(#sky)"/>
+  <g fill="#F5E2B8">
+    <circle cx="120" cy="52" r="1.4"/><circle cx="300" cy="30" r="1"/><circle cx="480" cy="70" r="1.2"/>
+    <circle cx="700" cy="26" r="1"/><circle cx="950" cy="48" r="1.4"/><circle cx="1150" cy="24" r="1"/>
+    <circle cx="1330" cy="60" r="1.2"/><circle cx="1500" cy="38" r="1"/><circle cx="860" cy="80" r="1"/>
+  </g>
+  <circle cx="1440" cy="70" r="26" fill="#F5E2B8" opacity=".92"/>
+  <circle cx="1430" cy="62" r="24" fill="#131736"/>
+
+  <!-- premiere searchlights -->
+  <g class="beam" style="transform-origin:640px 430px"><polygon points="640,430 560,0 700,0" fill="url(#beamg)"/></g>
+  <g class="beam beam2" style="transform-origin:900px 430px"><polygon points="900,430 830,0 990,0" fill="url(#beamg)"/></g>
+
+  <!-- blimp -->
+  <g class="blimp">
+    <ellipse cx="240" cy="90" rx="64" ry="22" fill="#0A0A0A" stroke="#D2B48C" stroke-width="1.5"/>
+    <rect x="216" y="108" width="48" height="10" rx="3" fill="#0A0A0A" stroke="#D2B48C" stroke-width="1"/>
+    <line x1="304" y1="90" x2="336" y2="90" stroke="#D2B48C" stroke-width="1"/>
+    <rect x="336" y="80" width="132" height="22" fill="#1A1F3C" stroke="#D2B48C" stroke-width="1"/>
+    <text x="402" y="95" text-anchor="middle" font-family="'Space Mono',monospace" font-size="11" letter-spacing="2" fill="#F5E2B8">FREE SHIPPING*</text>
+  </g>
+
+  <!-- far skyline: Manhattan left, Kerry right -->
+  <g fill="#0f1330">
+    <path d="M0,430 L0,240 L36,240 L36,206 L52,206 L52,240 L74,240 L74,180 L82,180 L84,150 L86,180 L94,180 L94,240 L126,240 L126,214 L158,214 L158,250 L196,250 L196,196 L204,196 L206,168 L208,196 L216,196 L216,250 L260,250 L260,226 L300,226 L300,262 L340,262 L340,430 Z"/>
+    <path d="M1160,430 L1160,300 C1220,258 1280,236 1360,252 C1430,266 1500,238 1600,270 L1600,430 Z"/>
+    <path d="M1470,282 L1478,282 L1478,236 L1474,222 L1470,236 Z" />
+  </g>
+  <g fill="#F5E2B8" opacity=".65">
+    <rect x="78" y="192" width="4" height="4"/><rect x="128" y="220" width="4" height="4"/><rect x="200" y="206" width="4" height="4"/><rect x="262" y="232" width="4" height="4"/>
+  </g>
+
+  <!-- EVERYTHING TOWER -->
+  <g>
+    <rect x="380" y="150" width="110" height="280" fill="#0A0A0A"/>
+    <rect x="380" y="150" width="110" height="280" fill="none" stroke="#23283f" stroke-width="1"/>
+    <g fill="#F5E2B8" opacity=".8">
+      <rect x="394" y="170" width="8" height="8"/><rect x="418" y="170" width="8" height="8"/><rect x="442" y="170" width="8" height="8" class="flicker"/><rect x="466" y="170" width="8" height="8"/>
+      <rect x="394" y="196" width="8" height="8"/><rect x="442" y="196" width="8" height="8"/><rect x="466" y="196" width="8" height="8" class="flicker2"/>
+      <rect x="418" y="222" width="8" height="8"/><rect x="466" y="222" width="8" height="8"/><rect x="394" y="248" width="8" height="8" class="flicker"/><rect x="442" y="248" width="8" height="8"/>
+    </g>
+    <text x="435" y="300" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" letter-spacing="2" fill="#A0A0A0">EVERYTHING</text>
+    <text x="435" y="316" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" letter-spacing="2" fill="#A0A0A0">TOWER</text>
+    <path d="M398,332 Q435,352 472,332" fill="none" stroke="#E8272A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M464,326 L474,331 L466,340" fill="none" stroke="#E8272A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- DATA BARN -->
+  <g>
+    <rect x="510" y="330" width="120" height="100" fill="#10142e"/>
+    <path d="M505,330 L570,296 L635,330 Z" fill="#0A0A0A"/>
+    <rect x="524" y="352" width="14" height="10" fill="#E8272A" class="flicker2"/>
+    <rect x="548" y="352" width="14" height="10" fill="#F5E2B8" opacity=".7"/>
+    <rect x="572" y="352" width="14" height="10" fill="#E8272A" class="flicker"/>
+    <text x="570" y="392" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" letter-spacing="1.5" fill="#A0A0A0">DATA BARN</text>
+    <text x="570" y="408" text-anchor="middle" font-family="'Space Mono',monospace" font-size="8" letter-spacing="1" fill="#5a6084">(HUMMING)</text>
+  </g>
+
+  <!-- THE V SPOT THEATRE (center) -->
+  <g>
+    <circle cx="800" cy="300" r="150" fill="url(#marqueeglow)"/>
+    <rect x="680" y="240" width="240" height="190" fill="#0A0A0A"/>
+    <rect x="700" y="212" width="200" height="28" fill="#0A0A0A"/>
+    <rect x="726" y="188" width="148" height="24" fill="#0A0A0A"/>
+    <!-- neon sign -->
+    <text x="800" y="207" text-anchor="middle" font-family="'Tilt Neon',sans-serif" font-size="26" fill="#ff6b6d" class="neonhum">THE V SPOT</text>
+    <!-- marquee board -->
+    <rect x="692" y="252" width="216" height="58" fill="#f6f2e7"/>
+    <rect x="692" y="252" width="216" height="58" fill="none" stroke="#D2B48C" stroke-width="3"/>
+    <text x="800" y="277" text-anchor="middle" font-family="'Space Mono',monospace" font-size="13" letter-spacing="2" fill="#0A0A0A">TONIGHT: ECOMMERCE</text>
+    <text x="800" y="297" text-anchor="middle" font-family="'Space Mono',monospace" font-size="13" letter-spacing="2" fill="#8a1618">SOLD OUT (OF STOCK)</text>
+    <!-- marquee bulbs -->
+    <g fill="#F5E2B8" class="bulbrow">
+      <circle cx="700" cy="246" r="3"/><circle cx="720" cy="246" r="3"/><circle cx="740" cy="246" r="3"/><circle cx="760" cy="246" r="3"/><circle cx="780" cy="246" r="3"/><circle cx="800" cy="246" r="3"/><circle cx="820" cy="246" r="3"/><circle cx="840" cy="246" r="3"/><circle cx="860" cy="246" r="3"/><circle cx="880" cy="246" r="3"/><circle cx="900" cy="246" r="3"/>
+    </g>
+    <!-- doors + glow -->
+    <rect x="756" y="360" width="28" height="70" fill="#F5E2B8" opacity=".85"/>
+    <rect x="792" y="360" width="28" height="70" fill="#F5E2B8" opacity=".7"/>
+    <rect x="828" y="360" width="28" height="70" fill="#F5E2B8" opacity=".85"/>
+    <text x="800" y="345" text-anchor="middle" font-family="'Space Mono',monospace" font-size="9" letter-spacing="3" fill="#D2B48C">V SPOT STUDIOS · TRALEE</text>
+  </g>
+
+  <!-- THE CHECKOUT diner -->
+  <g>
+    <rect x="960" y="352" width="130" height="78" fill="#10142e"/>
+    <rect x="960" y="340" width="130" height="12" fill="#0A0A0A"/>
+    <rect x="972" y="368" width="106" height="30" fill="#F5E2B8" opacity=".18"/>
+    <text x="1025" y="334" text-anchor="middle" font-family="'Tilt Neon',sans-serif" font-size="17" fill="#ff6b6d" class="neonhum2">THE CHECKOUT</text>
+    <text x="1025" y="416" text-anchor="middle" font-family="'Space Mono',monospace" font-size="8" letter-spacing="1" fill="#5a6084">ABANDONED CARTS TOWED</text>
+  </g>
+
+  <!-- RETURNS DEPT + boxes -->
+  <g>
+    <rect x="1120" y="330" width="150" height="100" fill="#0f1330"/>
+    <path d="M1120,330 L1195,306 L1270,330 Z" fill="#0A0A0A"/>
+    <text x="1195" y="360" text-anchor="middle" font-family="'Space Mono',monospace" font-size="11" letter-spacing="1.5" fill="#A0A0A0">RETURNS DEPT.</text>
+    <text x="1195" y="376" text-anchor="middle" font-family="'Space Mono',monospace" font-size="8" letter-spacing="1" fill="#5a6084">NO QUESTIONS, SOME JUDGEMENT</text>
+    <g fill="#D2B48C" opacity=".85">
+      <rect x="1136" y="404" width="18" height="14"/><rect x="1160" y="410" width="14" height="10"/><rect x="1282" y="404" width="18" height="16"/><rect x="1306" y="410" width="14" height="10"/><rect x="1326" y="400" width="16" height="20"/>
+    </g>
+  </g>
+
+  <!-- container crane far right -->
+  <g stroke="#23283f" stroke-width="4" fill="none">
+    <path d="M1420,430 L1420,320 L1560,320 M1470,320 L1470,352"/>
+  </g>
+  <g fill="#E8272A" opacity=".9"><rect x="1456" y="352" width="30" height="16"/></g>
+  <g fill="#D2B48C"><rect x="1500" y="398" width="34" height="14"/><rect x="1500" y="382" width="34" height="14" opacity=".8"/><rect x="1540" y="398" width="34" height="14" opacity=".9"/></g>
+
+  <!-- ostrich, head up -->
+  <g fill="#0A0A0A">
+    <ellipse cx="1104" cy="398" rx="17" ry="12"/>
+    <path d="M1112,390 Q1122,360 1118,338"/>
+    <line x1="1112" y1="390" x2="1119" y2="340" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="1120" cy="336" r="6"/>
+    <path d="M1126,336 L1134,338 L1126,341 Z" fill="#D2B48C"/>
+    <line x1="1098" y1="409" x2="1096" y2="428" stroke="#0A0A0A" stroke-width="3"/>
+    <line x1="1110" y1="409" x2="1112" y2="428" stroke="#0A0A0A" stroke-width="3"/>
+  </g>
+  <circle cx="1121" cy="334" r="1.4" fill="#F5E2B8"/>
+
+  <!-- street + struggle bus -->
+  <rect x="0" y="428" width="1600" height="2" fill="#23283f"/>
+  <g class="bus">
+    <polygon points="212,404 176,392 176,412" fill="#F5E2B8" opacity=".22"/>
+    <rect x="212" y="386" width="118" height="38" rx="5" fill="#D2B48C"/>
+    <rect x="212" y="402" width="118" height="7" fill="#E8272A"/>
+    <g fill="#1A1F3C"><rect x="222" y="392" width="16" height="10" rx="2"/><rect x="244" y="392" width="16" height="10" rx="2"/><rect x="266" y="392" width="16" height="10" rx="2"/><rect x="288" y="392" width="16" height="10" rx="2"/></g>
+    <text x="271" y="420" text-anchor="middle" font-family="'Space Mono',monospace" font-size="8" letter-spacing="1.5" fill="#1A1F3C">THE STRUGGLE BUS</text>
+    <circle cx="238" cy="426" r="7" fill="#0A0A0A" stroke="#A0A0A0" stroke-width="2"/>
+    <circle cx="306" cy="426" r="7" fill="#0A0A0A" stroke="#A0A0A0" stroke-width="2"/>
+  </g>
+</svg>
+</div>
+
+<style>
+.backlot { background: #0A0A0A; border-top: 1px solid #23283f; border-bottom: 1px solid rgba(210,180,140,.35); }
+.backlot svg { display: block; width: 100%; height: clamp(240px, 32vw, 430px); }
+.beam { animation: sway 9s ease-in-out infinite alternate; }
+.beam2 { animation-duration: 12s; animation-delay: -4s; }
+@keyframes sway { from { transform: rotate(-7deg); } to { transform: rotate(7deg); } }
+.blimp { animation: drift 70s linear infinite alternate; }
+@keyframes drift { from { transform: translateX(-60px); } to { transform: translateX(1080px); } }
+.flicker { animation: fl 3.4s steps(2) infinite; }
+.flicker2 { animation: fl 5.1s steps(2) infinite; animation-delay: 1.2s; }
+@keyframes fl { 50% { opacity: .15; } }
+.neonhum { animation: nh 4.2s ease-in-out infinite; }
+.neonhum2 { animation: nh 5.6s ease-in-out infinite; animation-delay: 1s; }
+@keyframes nh { 50% { opacity: .82; } }
+.bulbrow circle:nth-child(odd) { animation: fl 1.2s steps(2) infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .beam, .beam2, .blimp, .flicker, .flicker2, .neonhum, .neonhum2, .bulbrow circle { animation: none !important; }
+}
+</style>

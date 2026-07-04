@@ -1,0 +1,35 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Old Wix site URLs → new homes (live before the DNS flip so nothing 404s)
+[[redirects]]
+  from = "/podcast"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/podcast-1"
+  to = "/shows/ostrich-report/"
+  status = 301
+[[redirects]]
+  from = "/podcast-2"
+  to = "/shows/struggle-bus/"
+  status = 301
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+# Legacy domain redirects go live once DNS points here
+[[redirects]]
+  from = "/ostrich"
+  to = "/shows/ostrich-report/"
+  status = 301
+[[redirects]]
+  from = "/bus"
+  to = "/shows/struggle-bus/"
+  status = 301
+[[redirects]]
+  from = "/camp"
+  to = "https://camptralee.com"
+  status = 301

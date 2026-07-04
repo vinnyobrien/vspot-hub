@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Book a Call — The Office of Murt Moriarty | The V Spot Network" description="Book a call with Vinny O'Brien: ecommerce, retail, marketplaces, and cross-Atlantic strategy. Bookings handled, reluctantly, by his agent." type="ContactPage">
+  <main class="wrap page">
+    <p class="kicker">Management · Representation · Light Catering</p>
+    <h1>The Office of Murt Moriarty</h1>
+    <div class="showhero">
+      <div>
+        <img class="murtshot" src="/brand/murt.jpg" alt="Murt Moriarty at his desk, on the phone, mid-negotiation" width="1800" height="999" />
+        <p class="agenttitle" style="margin-top:12px">Talent Agent to The V Spot · Representing Vinny O'Brien since a handshake outside a Tralee chipper in 2011. A deal Murt describes as "binding in most jurisdictions."</p>
+      </div>
+      <div>
+        <div class="cue" style="max-width:560px"><span class="cuetag">Murt, on the phone, waving you in</span>Listen. LISTEN. You want the kid? Everybody wants the kid. Marketplaces, payments, the European thing with the customs, he does it ALL. I had him booked on three continents last year. Two of them on purpose.</div>
+        <div class="cue" style="max-width:560px; margin-top:18px"><span class="cuetag">Leaning in, quieter</span>I can get you thirty minutes. Forty-five if you laugh at the blimp joke. Between us, he'd do it for the love of the work. DO NOT tell him I said that, I'm still negotiating his loyalty to me.</div>
+      </div>
+    </div>
+
+    <p class="grid-label">Murt, moments before your call</p>
+    <video class="murtfilm" autoplay muted loop playsinline preload="metadata" width="1280" height="720" aria-label="Murt Moriarty bustling into his office, answering two phones at once">
+      <source src="/brand/murt-office.mp4" type="video/mp4" />
+    </video>
+    <p class="stagecaption" style="text-align:left; margin:10px 0 0">Both phones were for you. He panicked.</p>
+
+    <p class="grid-label">The booking sheet</p>
+    <p class="muted" style="margin-top:-6px; color:#8a8f9c">Murt is no longer allowed near the calendar. Fill this in and Vinny himself comes back to you, usually within a day, occasionally from an airport.</p>
+    <form class="bookform" name="book-a-call" method="POST" action="/welcome/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="book-a-call" />
+      <p class="hp"><label>Leave this empty <input name="bot-field" /></label></p>
+      <label>Your name<input type="text" name="name" required /></label>
+      <label>Email<input type="email" name="email" required /></label>
+      <label>Company (or glorious solo act)<input type="text" name="company" /></label>
+      <label>What's it about?
+        <select name="topic">
+          <option>Consulting: ecommerce / marketplaces / operations</option>
+          <option>Consulting: cross-border, EU/UK/US</option>
+          <option>Media: sponsorship or partnership</option>
+          <option>Speaking: conference or event</option>
+          <option>Something Murt wouldn't understand</option>
+        </select>
+      </label>
+      <label>The one-paragraph version<textarea name="brief" rows="4" placeholder="What's going on, what would make the call worth your time?"></textarea></label>
+      <button type="submit">Request the call</button>
+    </form>
+    <p class="muted" style="margin-top:28px; font-size:.85rem; color:#5a6084">Murt Moriarty is a fictional employee of V Spot Studios. All bookings go directly to Vinny, an arrangement Murt describes as "a betrayal."</p>
+    <div style="height:48px"></div>
+  </main>
+</Base>

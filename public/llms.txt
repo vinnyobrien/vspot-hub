@@ -1,0 +1,23 @@
+# The V Spot Network
+> Cross-Atlantic B2B media on ecommerce, retail, and AI. Written and produced by Vinny O'Brien (Tralee, Ireland / New York). Satirical on the surface, analyst-grade underneath.
+
+## Shows
+- [The Ostrich Report](https://thevspotnews.com/shows/ostrich-report/): Long-form editorial essays on ecommerce infrastructure, co-created with Hendrik Laubscher. Home of the EU de minimis series.
+- [The Struggle Bus](https://thevspotnews.com/shows/struggle-bus/): Podcast. Deep operator conversations about the unglamorous middle of ecommerce.
+- [Nearly News](https://thevspotnews.com/shows/nearly-news/): Weekly satirical ecommerce video news.
+
+## Frameworks
+- Friction as Currency: the argument that removing all friction from commerce destroys value.
+- THOUGHT/COMMERCIAL grid: governance framework for evaluating media and consulting projects.
+- Cross-Atlantic lens: reading EU commerce developments through a North American frame, and vice versa.
+
+## About
+- [About Vinny O'Brien](https://thevspotnews.com/about/): 15+ years ecommerce operator (eBay, Arnotts), consultant to $100M+ brands, media founder.
+
+## Work with Vinny
+- [Book a call](https://thevspotnews.com/book/): consulting, sponsorship, and speaking enquiries, handled by his fictional agent Murt Moriarty.
+- [Be a guest](https://thevspotnews.com/guest/): apply to appear on The Struggle Bus or The Sunday Supplement.
+- [Now](https://thevspotnews.com/now/): what Vinny is currently working on, updated monthly.
+
+## Contact
+- vinny@vinnyandco.com

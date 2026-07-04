@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import { regions } from '../data/vinland.js';
+
+---
+<Base title="VINLAND — The V Spot Network" description="The map of Vinny O'Brien's long-form essays on commerce, organised as territories: marketplaces, regulation, the Atlantic divide, AI, payments, and the humans doing the work." type="CollectionPage">
+  <main class="wrap page">
+    <p class="kicker">Territory of ideas</p>
+    <div class="showhero">
+      <img src="/brand/vinland-map.jpg" alt="A candlelit map of Kerry with a red pin on Tralee" width="726" height="570" />
+      <div>
+        <h1>VINLAND</h1>
+        <p>The long-form essays of the network, charted as territories. Eight regions, one canonical URL per essay, forever. New landfalls added as they're written; old pieces migrate in from the Substack with their permanent addresses.</p>
+      </div>
+    </div>
+    {regions.map(r => (
+      <>
+        <p class="grid-label">{r.name}</p>
+        <p class="muted" style="margin-top:-8px; color:#8a8f9c; font-size:.92rem">{r.line}</p>
+        <div class="programming" style="margin-top:14px">
+          {r.essays.map(e => (
+            <a class="slot" href={`/vinland/${e.slug}/`} style="--accent:#D2B48C">
+              <div class="body">
+                <span class="time">Essay</span>
+                <h3 style="font-size:1.25rem">{e.title}</h3>
+                <span class="status">{e.status}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </>
+    ))}
+    <div style="height:64px"></div>
+  </main>
+</Base>

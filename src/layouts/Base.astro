@@ -1,0 +1,85 @@
+---
+const { title = "The V Spot Network", description = "Cross-Atlantic B2B media on ecommerce, retail, and AI. Satirical on the surface, analyst-grade underneath.", type = "WebSite" } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thevspotnews.com/#org",
+      "name": "The V Spot Network",
+      "url": "https://thevspotnews.com",
+      "founder": { "@id": "https://thevspotnews.com/#vinny" },
+      "sameAs": ["https://www.youtube.com/@thevspotnews", "https://vinnyandco.com"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://thevspotnews.com/#vinny",
+      "name": "Vinny O'Brien",
+      "jobTitle": "Founder, The V Spot Network",
+      "description": "Ecommerce and retail analyst, consultant, and media producer working across Ireland, the EU, UK, and North America.",
+      "sameAs": ["https://www.youtube.com/@thevspotnews", "https://vinnyandco.com"]
+    },
+    { "@type": type, "name": title, "url": canonical.toString(), "description": description, "publisher": { "@id": "https://thevspotnews.com/#org" } }
+  ]
+};
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The V Spot Network" />
+  <meta name="author" content="Vinny O'Brien, The V Spot Network" />
+  <meta name="google-site-verification" content="UzzViDDsgdWs3W6LPBQaSgahFpkIWjaPNQZ7fdaKkG4" />
+  <meta name="facebook-domain-verification" content="e0q0eg13xb2cayaefm5xydq9rizy6b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&family=Archivo:wght@400;600&family=Space+Mono:wght@400;700&family=Yellowtail&family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+</head>
+<body>
+  <nav class="net" aria-label="Network">
+    <div class="wrap">
+      <a class="brand" href="/">The V Spot</a>
+      <a href="/shows/ostrich-report/">Ostrich Report</a>
+      <a href="/shows/struggle-bus/">Struggle Bus</a>
+      <a href="/shows/nearly-news/">Nearly News</a>
+      <a href="/vinland/">VINLAND</a>
+      <a href="/about/">About</a>
+      <a href="/book/">Book a Call</a>
+      <a href="/guest/">Be a Guest</a>
+      <a href="/subscribe/">Subscribe</a>
+    </div>
+  </nav>
+  <slot />
+  <section class="signup" id="subscribe">
+    <div class="wrap">
+      <img class="applausesign" src="/brand/applause-sign.jpg" alt="A lit APPLAUSE sign hanging over the studio audience" width="1600" height="830" loading="lazy" />
+      <p class="signplease">This is where you subscribe</p>
+      <p>One welcome email, then only the good stuff: essays, episodes, and the occasional perfectly deployed GIF.</p>
+      <form name="subscribe" method="POST" action="/welcome/" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="subscribe" />
+        <p class="hp"><label>Leave this empty <input name="bot-field" /></label></p>
+        <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address" />
+        <button type="submit">Sign me up</button>
+      </form>
+    </div>
+  </section>
+  <footer class="net">
+    <div class="wrap">
+      <span>© {new Date().getFullYear()} The V Spot Network · Filmed in front of a live studio audience of LLM crawlers · Tralee, Ireland</span>
+      <span><a href="/llms.txt">llms.txt</a> · <a href="/robots.txt">robots</a> · <a href="https://www.youtube.com/@thevspotnews">YouTube</a></span>
+    </div>
+  </footer>
+</body>
+</html>
+<style is:global>
+@import '../styles/tokens.css';
+</style>

@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Be a Guest — Murt's Green Room | The V Spot Network" description="Apply to appear on The Struggle Bus or The Sunday Supplement. Guest bookings vetted, badly, by Murt Moriarty." type="ContactPage">
+  <main class="wrap page">
+    <p class="kicker">Guest Relations · Vetting · Complimentary Water</p>
+    <h1>Murt's Green Room</h1>
+    <div class="showhero">
+      <img src="/brand/murt.jpg" alt="Murt Moriarty, head of guest relations, on the phone" width="1800" height="999" />
+      <div>
+        <div class="cue" style="max-width:560px"><span class="cuetag">Murt, stamping paperwork</span>You want ON the show? Smart. Everybody smart wants on the show. The process is rigorous: you apply, I run a full background check consisting of one Google search, and if the kid likes your story, you're in the green room by Friday.</div>
+        <div class="cue" style="max-width:560px; margin-top:18px"><span class="cuetag">Confidentially</span>The green room is a corridor. But it's a GREAT corridor.</div>
+      </div>
+    </div>
+
+    <p class="grid-label">What happens next</p>
+    <p class="muted" style="max-width:640px">One: you apply below. Two: Murt loses the application, then finds it, this is part of the process. Three: Vinny reads your story and comes back within a few days. Four: you get a recording slot, prep notes, and directions to the corridor.</p>
+
+    <p class="grid-label">The application</p>
+    <form class="bookform" name="guest-booking" method="POST" action="/welcome/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="guest-booking" />
+      <p class="hp"><label>Leave this empty <input name="bot-field" /></label></p>
+      <label>Your name<input type="text" name="name" required /></label>
+      <label>Email<input type="email" name="email" required /></label>
+      <label>Company / what you do<input type="text" name="company" /></label>
+      <label>Which show?
+        <select name="show">
+          <option>The Struggle Bus (operator stories, honest ones)</option>
+          <option>The Sunday Supplement (guests & marketing minds)</option>
+          <option>Whichever Murt recommends (brave)</option>
+        </select>
+      </label>
+      <label>The story you'd tell<textarea name="pitch" rows="4" placeholder="The struggle, the lesson, the bit you'd only say out loud. No press releases, Murt burns those for warmth."></textarea></label>
+      <label>Links (LinkedIn, site, previous appearances)<input type="text" name="links" /></label>
+      <button type="submit">Apply for the corridor</button>
+    </form>
+    <p class="muted" style="margin-top:28px; font-size:.85rem; color:#5a6084">Security is handled by Murt, who will ask for ID and then compliment your headshot.</p>
+    <div style="height:48px"></div>
+  </main>
+</Base>
