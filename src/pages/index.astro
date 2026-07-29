@@ -1,4 +1,5 @@
 ---
+import wire from '../data/wire.json';
 import Base from '../layouts/Base.astro';
 const shows = [
   { href: '/shows/nearly-news/', name: 'Nearly News', time: 'Weekly · Video', accent: '#E8272A', desc: 'The ecommerce news round-up, seen through the eyes of a madman. Everything is true except the bits that are funnier.', status: 'On air', img: '/brand/still-nearlynews.jpg', alt: 'The Nearly News desk, on air' },
@@ -8,7 +9,7 @@ const shows = [
   { href: '/shows/sunday-supplement/', name: 'The Sunday Supplement', time: 'Sundays · Guests', accent: '#D2B48C', desc: 'Guests and marketing minds. Balanced lighting, unbalanced opinions.', status: 'In development', img: '/brand/still-supplement.jpg', alt: 'The Sunday Supplement interview chairs' },
   { href: '/vinland/', name: 'VINLAND', time: 'Always on · Essays', accent: '#A0A0A0', desc: 'The map of standalone editorial art-objects. Friction as Currency lives here.', status: 'Migrating in', img: '/brand/vinland-map.jpg', alt: 'A candlelit map of Kerry with a red pin on Tralee' },
 ];
-const headlines = [
+const evergreen = [
   '<b>BREAKING:</b> Retailer discovers customers had feelings all along, analysts stunned',
   '<b>DEVELOPING:</b> EU announces regulation. Industry announces surprise. Nobody is surprised.',
   '<b>MARKETS:</b> Q4 forecast revised upward after someone finally read the Q3 numbers',
@@ -16,6 +17,15 @@ const headlines = [
   '<b>RETAIL:</b> Supply chain described as resilient by man visibly holding duct tape',
   '<b>EXCLUSIVE:</b> Free shipping revealed to have never, at any point, been free',
 ];
+
+// Today's wire, written by the cockpit. Falls back to the evergreen lines above
+// when the file is stale, so the ticker never presents old news as breaking.
+const WIRE_MAX_AGE_DAYS = 3;
+const wireAge = wire && wire.date ? (Date.now() - new Date(wire.date).getTime()) / 86400000 : 999;
+const fresh = wireAge <= WIRE_MAX_AGE_DAYS && Array.isArray(wire.stories)
+  ? wire.stories.filter(s => s && s.tag && s.line).map(s => `<b>${s.tag}:</b> ${s.line}`)
+  : [];
+const headlines = fresh.length >= 3 ? fresh : evergreen;
 const reel = headlines.map(h => `<span>${h}</span>`).join('');
 ---
 <Base title="The V Spot Network — Ecommerce, Retail & AI, Cross-Atlantic" description="Late-night energy for the commerce industry: The Ostrich Report, The Struggle Bus, Nearly News, and Vinny O'Brien's essays on ecommerce, retail, and AI.">
