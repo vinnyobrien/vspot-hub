@@ -1,0 +1,231 @@
+---
+/**
+ * The VINLAND map.
+ *
+ * Renders from the same `regions` export as the list below it, so adding an
+ * essay to src/data/vinland.js puts it on the map and in the index in one edit.
+ * There is no second source of truth and nothing to keep in sync.
+ *
+ * Geography is keyed by region name. A region without a shape still appears,
+ * in the uncharted waters strip, so a new territory can never silently vanish.
+ */
+const { regions = [] } = Astro.props;
+
+// Hand-drawn coastlines. Order matters: sea first, then land, then labels.
+const GEO = {
+  'The Atlantic Channel': {
+    d: 'M40,120 C90,190 70,300 96,392 C118,470 84,520 60,568 L40,568 Z',
+    label: [78, 350], rotate: -78, kind: 'water',
+  },
+  'The Friction Highlands': {
+    d: 'M188,96 C268,58 372,66 438,104 C486,132 470,196 424,222 C356,260 262,254 206,214 C164,184 158,124 188,96 Z',
+    label: [312, 158], kind: 'peaks',
+  },
+  'The Machine Frontier': {
+    d: 'M556,74 C650,52 776,72 830,124 C874,166 846,232 782,248 C702,268 606,246 566,200 C534,162 526,102 556,74 Z',
+    label: [694, 158], kind: 'new',
+  },
+  'The Marketplace Coast': {
+    d: 'M846,268 C904,300 918,382 890,454 C866,516 812,556 766,540 C724,526 726,462 748,404 C772,340 800,290 846,268 Z',
+    label: [824, 406], rotate: 74, kind: 'coast',
+  },
+  'The Human Interior': {
+    d: 'M330,268 C452,242 596,258 664,300 C716,332 704,404 640,430 C548,468 400,462 330,420 C280,390 276,300 330,268 Z',
+    label: [492, 350], kind: 'interior',
+  },
+  'The Regulatory Straits': {
+    d: 'M150,268 C208,282 236,330 232,382 C228,436 190,470 148,462 C112,454 100,404 108,354 C116,306 122,262 150,268 Z',
+    label: [168, 366], rotate: -84, kind: 'water',
+  },
+  'The Payment Rivers': {
+    d: 'M300,470 C392,452 520,458 596,484 C650,502 646,548 588,562 C500,584 372,578 306,552 C266,536 264,478 300,470 Z',
+    label: [452, 518], kind: 'rivers',
+  },
+  'The Deep Time Ranges': {
+    d: 'M392,596 C494,570 636,576 704,604 C752,624 740,668 676,678 C580,694 452,690 394,666 C356,650 358,606 392,596 Z',
+    label: [548, 636], kind: 'peaks',
+  },
+};
+
+const charted = regions.filter(r => GEO[r.name]);
+const uncharted = regions.filter(r => !GEO[r.name]);
+const slug = n => n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+---
+
+<section class="vmap" aria-labelledby="vmap-h">
+  <h2 id="vmap-h" class="vmap-h">The chart</h2>
+  <p class="vmap-sub">Eight territories. Choose one, or read the full index beneath.</p>
+
+  <div class="vmap-grid">
+    <div class="vmap-canvas">
+      <svg viewBox="0 0 940 720" role="group" aria-label="Map of VINLAND, eight territories of essays" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <radialGradient id="vsea" cx="45%" cy="40%" r="80%">
+            <stop offset="0%" stop-color="#151A33" />
+            <stop offset="100%" stop-color="#0A0C1B" />
+          </radialGradient>
+          <filter id="vrough">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="7" result="n" />
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="4" />
+          </filter>
+        </defs>
+
+        <rect x="0" y="0" width="940" height="720" fill="url(#vsea)" />
+
+        <!-- latitude lines, purely decorative -->
+        <g stroke="#D2B48C" stroke-opacity="0.07" stroke-width="1">
+          {[120, 240, 360, 480, 600].map(y => <line x1="0" y1={y} x2="940" y2={y} />)}
+          {[160, 320, 480, 640, 800].map(x => <line x1={x} y1="0" x2={x} y2="720" />)}
+        </g>
+
+        {charted.map(r => {
+          const g = GEO[r.name];
+          const [lx, ly] = g.label;
+          return (
+            <g
+              class="terr"
+              data-region={slug(r.name)}
+              role="button"
+              tabindex="0"
+              aria-label={`${r.name}. ${r.essays.length} essays.`}
+            >
+              <path d={g.d} class={`shape shape-${g.kind}`} filter="url(#vrough)" />
+              <path d={g.d} class="halo" />
+              <text
+                x={lx} y={ly}
+                class="tlabel"
+                text-anchor="middle"
+                transform={g.rotate ? `rotate(${g.rotate} ${lx} ${ly})` : undefined}
+              >{r.name.replace(/^The /, '')}</text>
+              <text x={lx} y={ly + 17} class="tcount" text-anchor="middle"
+                transform={g.rotate ? `rotate(${g.rotate} ${lx} ${ly})` : undefined}
+              >{r.essays.length}</text>
+            </g>
+          );
+        })}
+
+        <!-- Tralee, where the whole thing is drawn from -->
+        <g class="home" aria-hidden="true">
+          <circle cx="212" cy="352" r="4.5" />
+          <circle cx="212" cy="352" r="12" class="ping" />
+          <text x="212" y="378" text-anchor="middle">TRALEE</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="vmap-panel">
+      <div class="vpanel vpanel-idle" data-panel="idle">
+        <p class="vp-kicker">Uncharted</p>
+        <h3>Pick a territory</h3>
+        <p class="vp-line">The essays are grouped by what they argue about, not when they were written. Tap a region to see what lives there.</p>
+      </div>
+
+      {charted.map(r => (
+        <div class="vpanel" data-panel={slug(r.name)} hidden>
+          <p class="vp-kicker">{r.essays.length} {r.essays.length === 1 ? 'essay' : 'essays'}</p>
+          <h3>{r.name}</h3>
+          <p class="vp-line">{r.line}</p>
+          <ul class="vp-list">
+            {r.essays.map(e => (
+              <li>
+                <a href={`/vinland/${e.slug}/`}>
+                  <span class="vp-title">{e.title}</span>
+                  <span class="vp-status">{e.status}</span>
+                  {e.teaser && <span class="vp-teaser">{e.teaser}</span>}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {uncharted.length > 0 && (
+    <p class="vmap-uncharted">
+      Uncharted waters: {uncharted.map(r => r.name).join(', ')}. Add a shape in VinlandMap.astro to bring these onto the map.
+    </p>
+  )}
+</section>
+
+<style>
+  .vmap { margin: 28px 0 40px; }
+  .vmap-h { font-size: 1.6rem; margin: 0 0 2px; letter-spacing: .01em; }
+  .vmap-sub { color: #8a8f9c; font-size: .92rem; margin: 0 0 18px; }
+
+  .vmap-grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+  @media (min-width: 900px) { .vmap-grid { grid-template-columns: 1.35fr 1fr; align-items: start; } }
+
+  .vmap-canvas { border: 1px solid rgba(210,180,140,.18); background: #0A0C1B; }
+  .vmap-canvas svg { display: block; width: 100%; height: auto; }
+
+  .shape { stroke: #D2B48C; stroke-width: 1.4; stroke-opacity: .55; transition: fill .18s ease, stroke-opacity .18s ease; }
+  .shape-peaks { fill: #2A2F4D; }
+  .shape-interior { fill: #262B45; }
+  .shape-coast { fill: #2D3350; }
+  .shape-new { fill: #241E3F; }
+  .shape-rivers { fill: #22293F; }
+  .shape-water { fill: #121732; stroke-dasharray: 5 5; }
+
+  .halo { fill: none; stroke: #E8272A; stroke-width: 2.5; opacity: 0; transition: opacity .18s ease; }
+
+  .tlabel { font-family: inherit; font-size: 15px; font-weight: 700; fill: #E6E2D6; letter-spacing: .04em; pointer-events: none; }
+  .tcount { font-size: 10px; fill: #D2B48C; opacity: .75; letter-spacing: .18em; pointer-events: none; }
+
+  .terr { cursor: pointer; }
+  .terr:hover .shape, .terr:focus-visible .shape { fill: #3A3054; stroke-opacity: 1; }
+  .terr:hover .halo, .terr:focus-visible .halo { opacity: .8; }
+  .terr:focus { outline: none; }
+  .terr[data-active="true"] .halo { opacity: 1; }
+  .terr[data-active="true"] .shape { fill: #3E2740; stroke-opacity: 1; }
+
+  .home circle { fill: #E8272A; }
+  .home .ping { fill: none; stroke: #E8272A; stroke-width: 1; opacity: .5; animation: vping 3s ease-out infinite; }
+  .home text { font-size: 9px; fill: #D2B48C; letter-spacing: .22em; }
+  @keyframes vping { 0% { r: 5; opacity: .7 } 100% { r: 20; opacity: 0 } }
+
+  .vmap-panel { border: 1px solid rgba(210,180,140,.18); background: #10132A; padding: 18px; min-height: 260px; }
+  .vp-kicker { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: #D2B48C; margin: 0 0 6px; }
+  .vpanel h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.15; }
+  .vp-line { color: #8a8f9c; font-size: .9rem; line-height: 1.5; margin: 0 0 14px; }
+  .vp-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .vp-list a { display: block; padding: 10px 12px; background: #161B36; border-left: 2px solid #D2B48C; text-decoration: none; transition: background .15s ease, border-color .15s ease; }
+  .vp-list a:hover { background: #1D2342; border-left-color: #E8272A; }
+  .vp-title { display: block; font-weight: 600; font-size: .98rem; line-height: 1.25; }
+  .vp-status { display: block; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: #D2B48C; margin-top: 3px; }
+  .vp-teaser { display: block; font-size: .84rem; color: #8a8f9c; line-height: 1.45; margin-top: 5px; }
+
+  .vmap-uncharted { font-size: .82rem; color: #8a8f9c; margin-top: 12px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home .ping { animation: none; }
+    .shape, .halo, .vp-list a { transition: none; }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const root = document.currentScript.closest('section') || document;
+    const terrs = root.querySelectorAll('.terr');
+    const panels = root.querySelectorAll('.vpanel');
+
+    function show(id) {
+      panels.forEach((p) => { p.hidden = p.dataset.panel !== id; });
+      terrs.forEach((t) => { t.dataset.active = String(t.dataset.region === id); });
+    }
+
+    terrs.forEach((t) => {
+      const go = () => show(t.dataset.region);
+      t.addEventListener('click', go);
+      t.addEventListener('mouseenter', go);
+      t.addEventListener('focus', go);
+      t.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+      });
+    });
+
+    // Leaving the map entirely returns it to the resting state.
+    const svg = root.querySelector('svg');
+    if (svg) svg.addEventListener('mouseleave', () => show('idle'));
+  })();
+</script>
