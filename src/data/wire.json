@@ -1,5 +1,54 @@
 {
-  "date": null,
-  "stories": [],
-  "note": "Written by the cockpit. Empty means the ticker uses its evergreen lines."
+  "date": "2026-07-30T07:35:02.863Z",
+  "stories": [
+    {
+      "tag": "MARKETPLACE / SELL",
+      "line": "Amazon hands you a cost reduction with one hand and a Q4 enrollment deadline with the other — classic landlord energy dressed up as generosity.",
+      "url": "https://www.ecomcrew.com/amazon-expands-fba-new-selection-program-benefits-starting-july-30/",
+      "source": "Ecom Crew"
+    },
+    {
+      "tag": "PLATFORM STRATEGY ",
+      "line": "TikTok went from viral lip balm to full Prime cosplay in eighteen months — Amazon spent a decade building that moat and ByteDance is trying to tunnel under it with subscriptions an",
+      "url": "https://startupfortune.com/tiktok-shop-tests-subscriptions-and-its-next-move-looks-a-lot-like-amazon-prime/",
+      "source": "Startup Fortune"
+    },
+    {
+      "tag": "FASHION RETAIL / C",
+      "line": "Primark, founded in Dublin and built on the idea that cheap in-store beats cheap online, is now doing a supermarket price war against an algorithm that never has to pay rent — and ",
+      "url": "https://www.retailgazette.co.uk/blog/2026/07/primark-slashes-prices-by-up-to-29-as-shein-and-temu-loom-large/",
+      "source": "Retail Gazette"
+    },
+    {
+      "tag": "ECOMMERCE STATISTI",
+      "line": "The British summer, a football tournament, and a heatwave did more for UK ecommerce in four weeks than five years of 'omnichannel transformation' roadshows managed — sometimes the ",
+      "url": "https://www.retailgazette.co.uk/blog/2026/07/data-ecommerce-sales-hit-highest-level-since-2021/",
+      "source": "Retail Gazette"
+    },
+    {
+      "tag": "TRADE POLICY / CHI",
+      "line": "Brussels drew a line in the sand at €3, Shein responded by opening a 740,000 square metre logistics hub in Poland — the regulation changed the supply chain, not the outcome.",
+      "url": "https://shopappy.com/trade/cross-border-commerce/eu-de-minimis-wont-slow-temu-shein",
+      "source": "Shopappy"
+    },
+    {
+      "tag": "AGENTIC COMMERCE /",
+      "line": "An Irish cross-border commerce engine quietly wires itself into Microsoft Copilot and calls it a product launch — meanwhile everyone else is still arguing about whether agentic com",
+      "url": "https://www.digitalcommerce360.com/2026/07/22/esw-agentic-commerce-integration-microsoft-copilot/",
+      "source": "Digital Commerce 360"
+    },
+    {
+      "tag": "AI COMMERCE / CHEC",
+      "line": "The checkout just moved from your website into a conversation with a chatbot — if your product catalogue isn't structured for AI discovery today, you are already invisible to 900 m",
+      "url": "https://www.practicalecommerce.com/new-ecommerce-tools-july-29-2026",
+      "source": "Practical Ecommerce"
+    },
+    {
+      "tag": "LOGISTICS / ECOMME",
+      "line": "The world's biggest shipping company just became a selectable carrier inside a mid-market merchant dashboard — the unglamorous layer keeps eating the glamorous one, one API call at",
+      "url": "https://www.maersk.com/news/articles/2026/07/24/maersk-expands-ecommerce-ecosystem-through-shippypro-partnership",
+      "source": "Maersk Newsroom"
+    }
+  ],
+  "note": "Written by the cockpit. The site falls back to evergreen lines if this is more than three days old."
 }
