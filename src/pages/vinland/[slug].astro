@@ -1,20 +1,81 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { regions } from '../../data/vinland.js';
+
 export function getStaticPaths() {
   return regions.flatMap(r => r.essays.map(e => ({ params: { slug: e.slug }, props: { essay: e, region: r } })));
 }
+
 const { essay, region } = Astro.props;
-const migrating = essay.status.includes('Substack') || essay.status.includes('igrating');
+
+/**
+ * Three states, in order of preference:
+ *   body  — the essay lives here. This is the destination.
+ *   url   — it lives elsewhere for now. Send people straight to it, not to an archive.
+ *   none  — commissioned. Say so plainly rather than pretending.
+ *
+ * Add `body: [ 'para', 'para' ]` and/or `url: '...'` to an essay in
+ * src/data/vinland.js and this page changes state on its own.
+ */
+const hasBody = Array.isArray(essay.body) && essay.body.length > 0;
+const elsewhere = !hasBody && !!essay.url;
+const siblings = region.essays.filter(e => e.slug !== essay.slug);
 ---
 <Base title={`${essay.title} — VINLAND | The V Spot Network`} description={essay.teaser} type="Article">
   <main class="wrap page">
-    <p class="kicker">VINLAND · {region.name}</p>
+    <p class="kicker"><a href="/vinland/" style="color:inherit">VINLAND</a> · {region.name}</p>
     <h1>{essay.title}</h1>
-    <p>{essay.teaser}</p>
-    {migrating
-      ? <p class="muted">This territory has been claimed and its permanent address is the page you're on. The full essay is moving in from the archive as part of the VINLAND migration. In the meantime, the original lives in <a href="https://vinnyobrien.substack.com/archive">the Substack archive</a>, and this URL is the one to cite, share, and bookmark.</p>
-      : <p class="muted">Commissioned and in the works. This URL is permanent; the essay arrives here first.</p>}
-    <p class="muted" style="margin-top:26px"><a href="/vinland/">← Back to the map</a></p>
+    <p class="standfirst">{essay.teaser}</p>
+
+    {hasBody && (
+      <article class="essaybody">
+        {essay.body.map(p => <p>{p}</p>)}
+      </article>
+    )}
+
+    {elsewhere && (
+      <div class="elsewhere">
+        <p>The full essay lives on The V Spot for now. This URL is its permanent address, and it moves in here as part of the VINLAND migration.</p>
+        <a class="readbtn" href={essay.url} rel="noopener">Read the full essay →</a>
+      </div>
+    )}
+
+    {!hasBody && !elsewhere && (
+      <div class="elsewhere">
+        <p>Commissioned and in the works. This URL is permanent, and the essay arrives here first, before the newsletter.</p>
+        <a class="readbtn" href="/subscribe/">Get it when it lands →</a>
+      </div>
+    )}
+
+    {siblings.length > 0 && (
+      <section class="alsohere">
+        <p class="grid-label">Also in {region.name}</p>
+        <div class="programming" style="margin-top:14px">
+          {siblings.map(e => (
+            <a class="slot" href={`/vinland/${e.slug}/`} style="--accent:#D2B48C">
+              <div class="body">
+                <span class="time">Essay</span>
+                <h3 style="font-size:1.15rem">{e.title}</h3>
+                <span class="status">{e.status}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <p class="muted" style="margin-top:30px"><a href="/vinland/">← Back to the chart</a></p>
+    <div style="height:56px"></div>
   </main>
 </Base>
+
+<style>
+  .standfirst { font-size: 1.14rem; line-height: 1.6; color: #c9cdd8; max-width: 62ch; }
+  .essaybody { max-width: 66ch; margin-top: 22px; }
+  .essaybody p { font-size: 1.05rem; line-height: 1.72; margin: 0 0 1.15em; }
+  .elsewhere { margin-top: 24px; padding: 18px 20px; background: #10132A; border-left: 3px solid #D2B48C; max-width: 62ch; }
+  .elsewhere p { margin: 0 0 14px; color: #8a8f9c; font-size: .95rem; line-height: 1.55; }
+  .readbtn { display: inline-block; padding: 9px 16px; background: #E8272A; color: #0A0A0A; font-weight: 700; font-size: .88rem; letter-spacing: .04em; text-decoration: none; }
+  .readbtn:hover { background: #D2B48C; }
+  .alsohere { margin-top: 44px; }
+</style>
