@@ -1,12 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { regions } from '../../data/vinland.js';
+// Bodies published from the cockpit. Kept separate from vinland.js so the
+// hand-maintained index is never rewritten by a machine.
+import bodies from '../../data/essay-bodies.json';
 
 export function getStaticPaths() {
   return regions.flatMap(r => r.essays.map(e => ({ params: { slug: e.slug }, props: { essay: e, region: r } })));
 }
 
 const { essay, region } = Astro.props;
+const published = bodies[essay.slug] || null;
 
 /**
  * Three states, in order of preference:
@@ -17,7 +21,9 @@ const { essay, region } = Astro.props;
  * Add `body: [ 'para', 'para' ]` and/or `url: '...'` to an essay in
  * src/data/vinland.js and this page changes state on its own.
  */
-const hasBody = Array.isArray(essay.body) && essay.body.length > 0;
+const paragraphs = (published && published.body) || essay.body || [];
+const hasBody = Array.isArray(paragraphs) && paragraphs.length > 0;
+const hero = published && published.hero;
 const elsewhere = !hasBody && !!essay.url;
 const siblings = region.essays.filter(e => e.slug !== essay.slug);
 ---
@@ -27,9 +33,15 @@ const siblings = region.essays.filter(e => e.slug !== essay.slug);
     <h1>{essay.title}</h1>
     <p class="standfirst">{essay.teaser}</p>
 
+    {hero && (
+      <figure class="essayhero">
+        <img src={hero} alt={published.heroAlt || ''} loading="lazy" />
+      </figure>
+    )}
+
     {hasBody && (
       <article class="essaybody">
-        {essay.body.map(p => <p>{p}</p>)}
+        {paragraphs.map(p => <p>{p}</p>)}
       </article>
     )}
 
@@ -71,6 +83,8 @@ const siblings = region.essays.filter(e => e.slug !== essay.slug);
 
 <style>
   .standfirst { font-size: 1.14rem; line-height: 1.6; color: #c9cdd8; max-width: 62ch; }
+  .essayhero { margin: 22px 0 0; max-width: 66ch; }
+  .essayhero img { display: block; width: 100%; height: auto; border: 1px solid rgba(210,180,140,.2); }
   .essaybody { max-width: 66ch; margin-top: 22px; }
   .essaybody p { font-size: 1.05rem; line-height: 1.72; margin: 0 0 1.15em; }
   .elsewhere { margin-top: 24px; padding: 18px 20px; background: #10132A; border-left: 3px solid #D2B48C; max-width: 62ch; }
