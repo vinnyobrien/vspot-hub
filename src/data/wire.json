@@ -1,53 +1,53 @@
 {
-  "date": "2026-08-04T11:04:32.675Z",
+  "date": "2026-08-05T10:38:06.403Z",
   "stories": [
     {
-      "tag": "UK ONLINE RETAIL G",
-      "line": "UK ecommerce just hit its highest share since the shops were literally closed by law. Great news. Slightly awkward question about what that says about the shops.",
-      "url": "https://www.retailgazette.co.uk/blog/2026/07/data-ecommerce-sales-hit-highest-level-since-2021/",
-      "source": "Retail Gazette"
+      "tag": "EARNINGS / PLATFOR",
+      "line": "Shopify reports earnings today and the actual question is not the number — it's whether a free Meta shopping tool quietly ate the bottom of the merchant funnel while everyone was w",
+      "url": "https://seekingalpha.com/news/4624857-shopify-inc-q2-2026-earnings-preview",
+      "source": "Seeking Alpha"
     },
     {
-      "tag": "IN-STORE AI, SMART",
-      "line": "Morrisons has deployed thirty AI trolleys in Preston and University of London researchers have found smart cart users spend 32% more in store, which is the sort of statistic Morris",
-      "url": "https://www.thegrocer.co.uk/news/morrisons-kicks-off-uk-first-ai-smart-trolley-trial/721841.article",
-      "source": "The Grocer"
+      "tag": "M&A / GROCERY",
+      "line": "Sainsbury's bought Argos for £1.2 billion, spent a decade telling analysts it was a brilliant omnichannel play, and has now sold it for £120 million to a company that did not exist",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-31/sainsbury-s-agrees-to-sell-argos-division-to-swift-partners",
+      "source": "Bloomberg"
     },
     {
-      "tag": "IN-STORE AUTOMATIO",
-      "line": "Tesco now has a robot that wanders the aisles looking for gaps on shelves, which is also what a significant portion of the Friday afternoon staff were doing, but the robot files a ",
-      "url": "https://www.thegrocer.co.uk/news/tesco-trials-65ft-tall-aisle-roaming-robot-that-spots-gaps-on-shelves/721255.article",
-      "source": "The Grocer"
+      "tag": "AI / POLICY",
+      "line": "DoorDash used a cheaper Chinese AI for its code review, told everyone about it on X, and is now explaining this decision to Congress — a sequence of events that has its own interna",
+      "url": "https://www.cnbc.com/2026/07/31/us-lawmakers-doordash-chinese-ai-models.html",
+      "source": "CNBC"
     },
     {
-      "tag": "AI AGENTS, SUPPLY ",
-      "line": "Freehand's AI agents are now running accounts payable for Meta and Unilever, which means the most consequential procurement decisions in global commerce are being made by software ",
-      "url": "https://www.forbes.com/sites/davidprosser/2026/07/29/freehand-raises-75-million-as-its-ai-agents-target-the-supply-chain/",
-      "source": "Forbes"
+      "tag": "CROSS-BORDER / TAR",
+      "line": "Temu and Shein didn't disappear when the EU's new parcel duty landed — they just moved their stock closer to your house and stopped wasting money on ads they no longer needed.",
+      "url": "https://smarter-ecommerce.com/blog/en/google-shopping/europes-new-tariffs-on-temu-shein-what-google-shopping-data-reveals/",
+      "source": "Smarter Ecommerce (smec)"
     },
     {
-      "tag": "FULFILLMENT AUTOMA",
-      "line": "A fulfillment automation startup that can deploy in 1,000 square feet and pay for itself in under a year just raised $12 million, and nobody is writing think-pieces about it becaus",
-      "url": "https://www.prnewswire.com/news-releases/unit-ai-raises-12-million-to-scale-ai-powered-ecommerce-fulfillment-and-returns-as-customer-demand-accelerates-302837792.html",
-      "source": "PR Newswire"
-    },
-    {
-      "tag": "AGENTIC COMMERCE, ",
-      "line": "Walmart and Etsy are now selling through ChatGPT because that is where the customers are, which is also the exact argument every retailer made when they handed their margin to Amaz",
-      "url": "https://www.retaildive.com/news/retails-ai-bet-risks-data-market-share/810202/",
+      "tag": "CONSUMER SPENDING ",
+      "line": "American parents are spending a record amount per child on back-to-school supplies while simultaneously telling pollsters the economy is about to collapse — which is either cogniti",
+      "url": "https://www.retaildive.com/news/back-to-school-shoppers-mass-merchants-department-stores-spending-down/824817/",
       "source": "Retail Dive"
     },
     {
-      "tag": "ECOMMERCE INFRASTR",
-      "line": "Adidas is now a sports brand that will also run your ecommerce operation using AI agents, which is either a brilliant pivot or the first sign that the trainers are a loss-leader.",
-      "url": "https://www.digitalcommerce360.com/2026/06/10/adidas-ecommerce-as-a-service-eaas-salesforce-ai-agents/",
-      "source": "Digital Commerce 360"
+      "tag": "RETAIL TECHNOLOGY ",
+      "line": "B&M, the chain that sells everything for not much, just finished rolling out new tills across 790 stores — unglamorous work, done quietly, which is exactly the kind of infrastructu",
+      "url": "https://retailtechinnovationhub.com/home/2026/8/2/agentic-commerce-is-the-next-frontier-of-retail-but-many-retailers-are-struggling-to-keep-up",
+      "source": "Retail Technology Innovation Hub"
     },
     {
-      "tag": "SOCIAL COMMERCE, T",
-      "line": "TikTok Shop doubled its US sales to $4.9 billion in a single quarter and the fastest-growing customer is 45-plus, so the For You Page has apparently found your mam and she is buyin",
-      "url": "https://novadata.io/resources/news/tiktok-shop-q1-2026-49b-demographic-shift-amazon-sellers",
-      "source": "Novadata"
+      "tag": "RETAIL MEDIA",
+      "line": "A petrol station is now a retail media network, which means the most friction-laden moment in consumer commerce — filling your car in the rain — is also an ad placement opportunity",
+      "url": "https://www.modernretail.co/",
+      "source": "Modern Retail"
+    },
+    {
+      "tag": "EDITORIAL",
+      "line": "A short wire that is genuinely this week beats a full one that quietly isn't.",
+      "url": "",
+      "source": "The V Spot editorial note"
     }
   ],
   "note": "Written by the cockpit. The site falls back to evergreen lines if this is more than three days old."
