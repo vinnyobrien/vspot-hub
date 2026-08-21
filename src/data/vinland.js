@@ -28,6 +28,7 @@ export const regions = [
     { slug: 'to-ai-cause-and-solution', title: 'To AI: The Cause of, and Solution to, All of Commerce\u2019s Problems', status: 'From the Substack', teaser: 'With apologies to Homer Simpson: how the industry toasts its own disruptor.' },
     { slug: 'llms-ate-the-search-bar', title: 'LLMs Ate the Search Bar, Now What?', status: 'From the Substack', teaser: 'Search was the front door of ecommerce for twenty years. The door just became a conversation.' },
     { slug: 'the-agentic-sunrise', title: 'The Agentic Sunrise', status: 'From the Substack', teaser: 'What actually changes when the shopper sends software instead of showing up.' },
+    { slug: 'definitely-maybe', title: 'Definitely Maybe', status: 'Commissioned \u00b7 in the works', teaser: 'Everyone wants the agent. Nobody wants the plumbing. On data architecture as the prerequisite for AI rather than the consequence of it.' },
   ]},
   { name: 'The Payment Rivers', line: 'The money moves through every region. Consolidation, BNPL, and who owns the current.', essays: [
     { slug: 'the-great-consolidation', title: 'The Great Consolidation', status: 'Commissioned · analysis exists', teaser: 'Klarna to JPMorgan, Affirm to Adyen: the cross-Atlantic consolidation of payments, and what it forecloses.' },
