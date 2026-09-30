@@ -1,0 +1,76 @@
+THE V SPOT EDITORIAL CHARTER AND PROVENANCE GUIDE
+Renewed 30 September 2026
+Public page: https://thevspotnews.com/mission/
+
+PURPOSE
+Use this guide as background for news scripts, essays, interviews, sponsor concepts, show development and editorial reviews. The originals are historical sources, not a current operating plan. The public charter is the audience-facing promise; the guidance below translates it into review questions.
+
+SOURCE RECORD
+1. RMW Media Vision 2025.pdf
+Library ID: libfile_b31803d0557c8191b6948d9f10a114b2
+Original title: RMW Commerce Media Vision: Commerce with Character.
+Contributions: operator-led expertise; bold, curious and irreverent storytelling; global perspectives; facts at the centre; editorial independence; transparency; visible corrections; substance alongside style.
+Historical context: 2025–2026 roadmap, proposed shows and hires, prices, targets, sponsorship prospects and named owners were plans in that document. They are not verified current commitments.
+Source caution: illustrative episode references and guest quotations in the white-paper ideas are not independently verified. Do not reuse them as reported facts or attributed quotes without checking the primary record. The Newsroom quotations are creative influences, not independent evidence or V Spot-authored statements.
+
+2. The RMW News Desk - Monthly.docx
+Library ID: libfile_2157c53f29e0819182e18377396727dc
+Contributions: retail analysis plus satire; monthly news digest; panel participation; Fact or Farce and other games; a meaningful closing takeaway; long-form episodes with short-form derivatives.
+Historical context: proposed host roles, guest names, sponsor placements, show duration and cadence are format concepts, not confirmed arrangements.
+
+RENEWED EDITORIAL POSITION
+Commerce with character. Explain the story that matters using operator insight, evidence and humour. Give audiences enough context to understand it and an engaging reason to pay attention.
+Mission: make ecommerce, retail, marketplaces and the technology reshaping them easier to understand and harder to hide behind jargon.
+Vision: a trusted home for informed debate, curiosity and useful perspectives across markets; individual formats share common editorial standards.
+
+VALUES AND PRACTICAL REVIEW
+Facts at the centre
+- Confirm the underlying event and figures using primary records where possible.
+- Separate fact, interpretation, opinion and speculation.
+- State material uncertainty. Avoid false equivalence between evidence and unsupported claims.
+
+Independent judgement
+- Identify sponsorship and material commercial relationships.
+- Sponsor feedback on creative delivery or factual brand details does not buy a favourable editorial conclusion.
+- Keep final editorial responsibility with Vinny/the V Spot.
+- Check whether a story or criticism was softened solely for a commercial relationship.
+
+Humour with a purpose
+- Identify the target of the joke: hype, incentives, contradictions, marketing claims or decisions.
+- Ensure the factual premise survives the joke.
+- Make parody, invented dialogue and comic scenarios recognisable as such.
+- Remove cruelty, private gossip and jokes that obscure the meaning rather than illuminate it.
+
+Respect for people doing the work
+- Challenge claims and decisions without making personal humiliation the purpose.
+- Include consequences for customers, teams and operators.
+- Seek useful lived experience beyond the familiar keynote voices.
+
+Curiosity beyond the headline
+- Ask who benefits, who pays, what incentives are at work and what changes in practice.
+- Examine the infrastructure behind the promise, including payments, logistics and platforms.
+- Prefer an original angle or useful explanation over repackaging a press release.
+
+The willingness to do better
+- Correct substantive errors visibly and promptly.
+- Reconsider conclusions when new evidence warrants it.
+- Maintain a record of material revisions and their reason.
+
+VOICE GUIDE
+Informed, curious, irreverent, plainspoken and humane.
+Strong opinions should show their reasoning. Use concrete examples and accessible language. Cultural riffs and absurdity can make a serious idea memorable. Vary the humour by format: news satire can be sharp; interviews should leave space for the guest; essays can take a longer and more reflective path.
+Avoid unsupported certainty, jargon that hides a weak idea, gratuitous personal attacks, corporate boilerplate and fabricated attributed quotes.
+
+FORMAT DEVELOPMENT
+The weekly satirical news and PSA concepts can share the same values while using different structures. The monthly News Desk is a reusable development concept: news digest, rotating panel, participatory games and a useful closing takeaway. It is not presented as a launched show.
+Use the game-show material when exploring audience participation or alternatives to conventional webinars. Validate audience purpose, timing, costs and partners for each proposal rather than inheriting historical assumptions.
+
+PROVENANCE FOR EACH CONTENT PIECE
+Record the originating idea and author; source links or files; the factual claims checked; any quoted material and verified attribution; what was invented for satire; commercial relationships; the review outcome; and publication destination/version.
+For the Sub Editor review, assess the premise, factual support, tone, usefulness, commercial transparency and how the piece meets these values. This guide does not itself implement or change any Cockpit software.
+
+PUBLICATION RULE
+The user explicitly requires rewritten or edited mission and vision statements to be published on thevspotnews.com. Publish substantive changes to the public charter alongside the corresponding guide revision. Maintain the original source documents as provenance. Record the publication URL, date, revision reason and live verification result. Do not describe an unverified deployment as published.
+
+REVISION NOTE
+This renewal consolidates the mission and integrity principles from the RMW vision and the analysis-plus-comedy approach from the monthly News Desk. It adapts them to The V Spot Network, removes old operational promises from the public page, and expresses the values in original prose rather than reproducing television dialogue.
