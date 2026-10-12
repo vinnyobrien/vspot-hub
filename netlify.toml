@@ -2,6 +2,19 @@
   command = "npm run build"
   publish = "dist"
 
+# Guest-scoped operations are handled by the existing production cockpit.
+[[redirects]]
+  from = "/api/backstage"
+  to = "https://vspot-cockpit-vco.netlify.app/api/guest-pass"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/backstage/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Referrer-Policy = "no-referrer"
+
 # Old Wix site URLs → new homes (live before the DNS flip so nothing 404s)
 [[redirects]]
   from = "/podcast"
