@@ -1,6 +1,7 @@
 ---
 import wire from '../data/wire.json';
 import Base from '../layouts/Base.astro';
+import Testimonial from '../components/Testimonial.astro';
 const shows = [
   { href: '/shows/nearly-news/', name: 'Nearly News', time: 'Weekly · Video', accent: '#E8272A', desc: 'The ecommerce news round-up, seen through the eyes of a madman. Everything is true except the bits that are funnier.', status: 'On air', img: '/brand/still-nearlynews.jpg', alt: 'The Nearly News desk, on air' },
   { href: '/shows/ostrich-report/', name: 'The Ostrich Report', time: 'Long-form · Editorial', accent: '#D2B48C', desc: 'Heads out of the sand. Deep essays on the infrastructure of commerce, with Hendrik Laubscher.', status: 'Publishing', img: '/brand/still-ostrich.jpg', alt: 'The Ostrich Report anchor at his desk' },
@@ -87,6 +88,7 @@ const reel = headlines.map(h => `<span>${h}</span>`).join('');
         <a class="cta" href="/about/">Meet the host</a>
       </div>
     </div>
+    <Testimonial />
     <p class="grid-label">From the agency</p>
     <div class="host">
       <img src="/brand/murt.jpg" alt="Murt Moriarty, talent agent, on the phone at his cluttered desk" loading="lazy" width="1800" height="999" />

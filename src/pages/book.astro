@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Testimonial from '../components/Testimonial.astro';
 ---
 <Base title="Book a Call — The Office of Murt Moriarty | The V Spot Network" description="Book a call with Vinny O'Brien: ecommerce, retail, marketplaces, and cross-Atlantic strategy. Bookings handled, reluctantly, by his agent." type="ContactPage">
   <main class="wrap page">
@@ -22,6 +23,7 @@ import Base from '../layouts/Base.astro';
     </video>
     <p class="stagecaption" style="text-align:left; margin:10px 0 0">Both phones were for you. He panicked.</p>
 
+    <Testimonial full />
     <p class="grid-label">The booking sheet</p>
     <p class="muted" style="margin-top:-6px; color:#8a8f9c">Murt is no longer allowed near the calendar. Fill this in and Vinny himself comes back to you, usually within a day, occasionally from an airport.</p>
     <form class="bookform" name="book-a-call" method="POST" action="/welcome/" data-netlify="true" netlify-honeypot="bot-field">

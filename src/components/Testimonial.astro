@@ -1,0 +1,37 @@
+---
+import testimonials from '../data/testimonials.json';
+const { full = false } = Astro.props;
+const recommendation = testimonials.alyssiaSmith;
+---
+<section class="recommendation" aria-label="Event hosting recommendation">
+  <p class="kicker">From the headline stage</p>
+  <figure>
+    <blockquote><p>“{recommendation.quote}”</p></blockquote>
+    <figcaption>
+      <strong>{recommendation.name}</strong>
+      <span>{recommendation.context}</span>
+      <span>{recommendation.source} · <time datetime={recommendation.date}>{recommendation.displayDate}</time></span>
+    </figcaption>
+  </figure>
+  {full ? (
+    <details>
+      <summary>Read the full recommendation</summary>
+      <blockquote class="full-quote">{recommendation.paragraphs.map(paragraph => <p>{paragraph}</p>)}</blockquote>
+    </details>
+  ) : <a class="recommendation-link" href="/about/#recommendation">Read the full recommendation →</a>}
+</section>
+<style>
+  .recommendation { margin: 48px 0; padding: clamp(24px, 5vw, 48px); border: 1px solid var(--tan); border-left: 5px solid var(--red); background: rgba(10,10,10,.2); }
+  .recommendation .kicker { color: var(--tan); margin-bottom: 20px; }
+  blockquote { margin: 0; }
+  blockquote > p { font-family: var(--display); font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.45; max-width: 850px; }
+  figcaption { margin-top: 24px; font-size: .9rem; line-height: 1.7; }
+  figcaption strong, figcaption span { display: block; }
+  figcaption strong { color: var(--tan); }
+  figcaption span { color: var(--grey); }
+  .recommendation-link { display: inline-block; margin-top: 20px; color: var(--tan); }
+  details { margin-top: 24px; }
+  summary { cursor: pointer; color: var(--tan); }
+  .full-quote { margin-top: 18px; }
+  .full-quote > p { font-family: var(--body); font-size: 1rem; margin-top: 16px; }
+</style>
