@@ -2,7 +2,7 @@ const dialogs=document.querySelectorAll('dialog');
 document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>document.getElementById(b.dataset.open)?.showModal()));
 dialogs.forEach(d=>{d.querySelector('.close').addEventListener('click',()=>d.close());d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});});
 document.getElementById('lights').addEventListener('click',e=>{const b=e.currentTarget,on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(on));document.body.classList.toggle('lights-dimmed',!on);b.firstChild.textContent=on?'Lights are on ':'A little atmosphere ';});
-document.getElementById('reveal-answer').addEventListener('click',()=>{document.getElementById('quiz-answer').hidden=false;});
+document.getElementById('reveal-answer')?.addEventListener('click',()=>{document.getElementById('quiz-answer').hidden=false;});
 document.querySelectorAll('[data-choice]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-choice]').forEach(x=>x.classList.toggle('selected',x===b));document.getElementById('scenario-response').textContent='Now another fact: the assistant can’t show you any products outside its partner catalogue. Would you change your answer? That’s the conversation.';}));
 const match=location.hash.match(/^#pass=([a-f0-9-]{36})\.([a-f0-9]{64})$/);
 const id=match?.[1],token=match?.[2];
