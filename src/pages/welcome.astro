@@ -1,11 +1,190 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Welcome aboard — The V Spot Network" description="You're on the network.">
-  <main class="wrap page">
-    <p class="kicker">Signal acquired</p>
-    <h1>Welcome aboard</h1>
-    <p>You're on the network. A welcome email is on its way, assuming the transatlantic cables hold.</p>
-    <p>While you wait, three good places to start: <a href="/shows/ostrich-report/">The Ostrich Report</a>, <a href="/shows/struggle-bus/">The Struggle Bus</a>, and <a href="https://www.youtube.com/@thevspotnews">the YouTube channel</a>.</p>
+<Base title="Backstage Pass — The V Spot Network" description="Your backstage pass to The V Spot: Nearly News, the podcasts, essays, live events, and a few excellent ways to get involved." type="WebPage">
+  <main class="backstage">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"><span class="onair-dot"></span> The V Spot Network · Backstage Pass</p>
+          <h1>You’re in.<br /><em>Mind the cables.</em></h1>
+          <p class="intro">A little map of what I do, what I make, and where you can jump in. No lanyard required. The clipboard is mostly decorative.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#shows">Meet the shows</a>
+            <a class="button button-quiet" href="#partners">Make something happen</a>
+          </div>
+          <p class="hero-note">Hosted from Tralee, County Kerry. Broadcast wherever the Wi-Fi behaves.</p>
+        </div>
+        <figure class="hero-art">
+          <img src="/backstage/dressing-room.webp" alt="A backstage dressing room at The V Spot" width="1200" height="800" fetchpriority="high" />
+          <figcaption>Backstage. Mind the cable. It’s probably important.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="wrap section" id="shows">
+      <p class="grid-label">Now appearing on the network</p>
+      <div class="show-grid">
+        <a class="show-card" href="/shows/nearly-news/">
+          <span class="number">01 · THE WEEKLY DESK</span>
+          <h2>The V Spot: Nearly News</h2>
+          <p>What’s happening in ecommerce, retail and tech, with the solemnity the stories absolutely do not deserve.</p>
+          <span class="link-label">Watch the latest <b>↗</b></span>
+        </a>
+        <a class="show-card" href="/shows/ostrich-report/">
+          <span class="number">02 · MARKETPLACE COUNTRY</span>
+          <h2>The Ostrich Report</h2>
+          <p>Marketplace people, real operating stories and the uncomfortable bits that don’t fit on a conference slide.</p>
+          <span class="link-label">Meet the Ostrich <b>↗</b></span>
+        </a>
+        <a class="show-card" href="/shows/struggle-bus/">
+          <span class="number">03 · CAREER HONESTY</span>
+          <h2>The Struggle Bus</h2>
+          <p>Good people talking honestly about work: the turns, the dents, the lessons and the occasional wrong exit.</p>
+          <span class="link-label">Climb aboard <b>↗</b></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="read-strip">
+      <div class="wrap read-grid">
+        <div>
+          <p class="kicker">The written word · fewer microphones</p>
+          <h2>Read along on Substack</h2>
+          <p>Essays, the Nearly News round-up and other thoughts that escaped before we could put them back in the edit.</p>
+        </div>
+        <a class="button button-paper" href="https://vinnyobrien.substack.com/subscribe" target="_blank" rel="noopener noreferrer">Open the Substack <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="wrap section involvement">
+      <div class="involve-copy">
+        <p class="grid-label">Come on the show</p>
+        <h2>Got a story?<br /><em>Bring the interesting bit.</em></h2>
+        <p>We’re always looking for thoughtful guests for The Ostrich Report and The Struggle Bus. Nominate yourself, a colleague, or that friend who says “it’s a long story” and then delivers.</p>
+        <p>No press releases, please. Murt burns them for warmth.</p>
+        <a class="button button-primary" href="/guest/">Pitch a guest (possibly you)</a>
+      </div>
+      <aside class="contact-card">
+        <span class="number">THE GREEN ROOM DOOR</span>
+        <h3>Something else?</h3>
+        <p>Guest ideas, questions, useful disagreements, or a sponsor idea with actual legs.</p>
+        <a href="mailto:vinny@vinnyandco.com?subject=Hello%20from%20The%20V%20Spot">Email Vinny <b>↗</b></a>
+      </aside>
+    </section>
+
+    <section class="partner-section" id="partners">
+      <div class="wrap section">
+        <p class="kicker"><span class="onair-dot"></span> Commercial break · the good kind</p>
+        <h2 class="partner-heading">Good partners make<br /><em>good shows possible.</em></h2>
+        <p class="partner-intro">If your brand wants to be part of work with a point of view, let’s talk. Sponsorships are built around the audience and the story, not a logo tossed into the confetti cannon.</p>
+        <div class="partner-grid">
+          <article class="partner-card featured">
+            <span class="number">THE V SPOT NETWORK</span>
+            <h3>Put your name in the credits.</h3>
+            <p>Partner with the shows and help make independent ecommerce media a little louder, sharper and more fun.</p>
+            <a href="mailto:vinny@vinnyandco.com?subject=The%20V%20Spot%20sponsorship">Talk V Spot sponsorship <b>↗</b></a>
+          </article>
+          <article class="partner-card">
+            <span class="number">CAMP TRALEE</span>
+            <h3>Take the conversation off-screen.</h3>
+            <p>Camp Tralee brings the ecommerce crowd together in person. Have a look around; the kettle is probably on.</p>
+            <div class="partner-links">
+              <a href="https://camptralee.com" target="_blank" rel="noopener noreferrer">Visit Camp Tralee <b>↗</b></a>
+              <a href="mailto:vinny@vinnyandco.com?subject=Camp%20Tralee%20partnership">Partner with Camp <b>↗</b></a>
+            </div>
+          </article>
+          <article class="partner-card">
+            <span class="number">LONDON · 2027</span>
+            <h3>Have I Got Ecomm News For You?</h3>
+            <p>Ten live shows, two teams and a host, bringing ecommerce’s best stories to a room in central London. No cameras. No corporate theatre. Possibly a buzzer.</p>
+            <a href="mailto:vinny@vinnyandco.com?subject=Have%20I%20Got%20Ecomm%20News%20For%20You%3F%20partnership">Ask about the 2027 series <b>↗</b></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap final-note">
+      <p class="kicker">That’s the tour</p>
+      <h2>Thanks for stopping by.</h2>
+      <p>Follow a show, read a piece, pitch a guest, or get in touch. You’ve now seen more of the operation than most of the crew.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://www.youtube.com/@thevspotnews?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a>
+        <a class="button button-quiet" href="/">Back to the network</a>
+      </div>
+    </section>
   </main>
 </Base>
+
+<style>
+.backstage { overflow: hidden; }
+.hero { background: radial-gradient(ellipse 80% 75% at 90% 20%, #272e59 0%, #1A1F3C 55%, #0A0A0A 100%); border-bottom: 1px solid rgba(232,39,42,.4); }
+.hero-grid { min-height: 520px; padding-top: 70px; padding-bottom: 64px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 46px; align-items: center; }
+.kicker, .number { font-family: var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--tan); font-size: .72rem; }
+.onair-dot { display: inline-block; width: 8px; height: 8px; margin-right: 8px; background: var(--red); border-radius: 50%; box-shadow: 0 0 12px rgba(232,39,42,.85); vertical-align: 1px; }
+.hero h1 { margin: 22px 0 18px; color: var(--paper); font-family: var(--display); font-size: clamp(3.2rem, 7vw, 6rem); line-height: .98; letter-spacing: .015em; text-shadow: 0 0 26px rgba(232,39,42,.22); }
+.hero h1 em, .involvement h2 em, .partner-heading em { color: #ff6b6d; font-style: normal; text-shadow: 0 0 16px rgba(232,39,42,.45); }
+.intro { max-width: 520px; color: #d8d7d2; font-size: 1.14rem; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 18px; font-family: var(--mono); font-size: .72rem; letter-spacing: .11em; text-transform: uppercase; text-decoration: none; border: 1px solid transparent; transition: transform .2s, border-color .2s, background .2s; }
+.button:hover, .button:focus-visible { transform: translateY(-2px); }
+.button-primary { background: var(--red); color: #fff; }
+.button-primary:hover, .button-primary:focus-visible { background: #ff3d40; }
+.button-quiet { border-color: #555b7b; color: var(--paper); background: rgba(10,10,10,.22); }
+.button-quiet:hover, .button-quiet:focus-visible { border-color: var(--tan); }
+.hero-note { margin-top: 24px; color: var(--grey); font-family: var(--mono); font-size: .68rem; letter-spacing: .08em; }
+.hero-art { position: relative; }
+.hero-art img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid rgba(210,180,140,.55); box-shadow: 16px 16px 0 rgba(10,10,10,.4); }
+.hero-art figcaption { margin-top: 20px; color: var(--grey); font-family: var(--mono); font-size: .65rem; letter-spacing: .13em; text-transform: uppercase; text-align: right; }
+.section { padding-top: 64px; padding-bottom: 68px; }
+.section .grid-label { margin-top: 0; }
+.show-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+.show-card { display: flex; flex-direction: column; min-height: 270px; padding: 24px; text-decoration: none; border: 1px solid #2a3050; background: linear-gradient(160deg, rgba(10,10,10,.65), rgba(10,10,10,.15)); transition: transform .2s, border-color .2s; }
+.show-card:hover, .show-card:focus-visible { transform: translateY(-3px); border-color: var(--red); }
+.show-card h2 { margin: 16px 0 10px; font-family: var(--display); font-size: 1.7rem; line-height: 1.1; color: var(--red); }
+.show-card p { color: var(--grey); font-size: .94rem; }
+.link-label { margin-top: auto; padding-top: 20px; color: var(--tan); font-family: var(--mono); font-size: .7rem; letter-spacing: .11em; text-transform: uppercase; }
+.link-label b, .partner-card b, .contact-card b { color: var(--red); }
+.read-strip { padding: 48px 0; background: #0A0A0A; border-top: 1px solid rgba(210,180,140,.25); border-bottom: 1px solid rgba(210,180,140,.25); }
+.read-grid { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.read-grid h2, .involvement h2, .partner-heading, .final-note h2 { margin: 8px 0 10px; font-family: var(--display); font-size: clamp(2rem, 4vw, 3.1rem); color: var(--paper); line-height: 1.05; }
+.read-grid p:not(.kicker) { max-width: 620px; color: var(--grey); }
+.button-paper { color: var(--black); background: var(--tan); white-space: nowrap; }
+.button-paper:hover, .button-paper:focus-visible { background: #f0d8b0; }
+.involvement { display: grid; grid-template-columns: 1.4fr .6fr; gap: 50px; align-items: center; }
+.involvement h2 { margin-top: 0; }
+.involvement p:not(.grid-label) { max-width: 660px; color: #c1c1c4; }
+.contact-card { padding: 26px; border: 1px solid #3a4166; background: rgba(10,10,10,.35); }
+.contact-card h3 { margin: 14px 0 8px; color: var(--tan); font-family: var(--display); font-size: 1.5rem; }
+.contact-card p { color: var(--grey); font-size: .92rem; }
+.contact-card a, .partner-card a { display: inline-block; margin-top: 14px; color: var(--paper); font-family: var(--mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; text-decoration-color: rgba(210,180,140,.6); text-underline-offset: 5px; }
+.partner-section { background: #0A0A0A; border-top: 1px solid rgba(232,39,42,.35); border-bottom: 1px solid rgba(210,180,140,.2); }
+.partner-heading { margin: 14px 0; font-size: clamp(2.4rem, 5vw, 4.2rem); }
+.partner-intro { max-width: 650px; margin-bottom: 30px; color: var(--grey); }
+.partner-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+.partner-card { min-height: 260px; padding: 24px; border: 1px solid #2a3050; background: linear-gradient(160deg, #171c38, #101326); display: flex; flex-direction: column; }
+.partner-card.featured { border-color: rgba(232,39,42,.7); box-shadow: inset 0 3px 0 var(--red); }
+.partner-card h3 { margin: 16px 0 10px; color: var(--tan); font-family: var(--display); font-size: 1.55rem; line-height: 1.1; }
+.partner-card p { color: var(--grey); font-size: .92rem; }
+.partner-card > a, .partner-links { margin-top: auto; }
+.partner-links { display: flex; gap: 14px; flex-wrap: wrap; }
+.partner-links a { margin-top: 18px; }
+.final-note { padding-top: 64px; padding-bottom: 78px; text-align: center; }
+.final-note h2 { color: var(--tan); }
+.final-note > p:not(.kicker) { max-width: 620px; margin: 0 auto; color: var(--grey); }
+.final-note .hero-actions { justify-content: center; }
+@media (max-width: 780px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; padding-top: 52px; }
+  .hero-art { max-width: 600px; }
+  .show-grid, .partner-grid { grid-template-columns: 1fr; }
+  .show-card, .partner-card { min-height: auto; }
+  .involvement { grid-template-columns: 1fr; gap: 28px; }
+  .read-grid { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: clamp(2.8rem, 16vw, 4rem); }
+  .hero-actions .button { width: 100%; }
+  .section { padding-top: 48px; padding-bottom: 52px; }
+  .partner-links { flex-direction: column; }
+}
+</style>
