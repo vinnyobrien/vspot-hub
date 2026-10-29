@@ -57,6 +57,32 @@ import Base from '../layouts/Base.astro';
       </div>
     </section>
 
+    <section class="consulting-section" id="consulting">
+      <div class="wrap consulting-grid">
+        <figure class="consulting-portrait">
+          <img src="/brand/vinny-nrf.jpg" alt="Vinny O’Brien speaking at NRF in New York" width="733" height="1100" loading="lazy" />
+          <figcaption>Me at NRF in New York, looking like I definitely know where the next session is.</figcaption>
+        </figure>
+        <div class="consulting-copy">
+          <p class="kicker">Behind the microphone · during office hours</p>
+          <h2>Consultant, too.<br /><em>Still asking questions.</em></h2>
+          <p>I’m Vinny. I work with SMEs, SMBs and enterprise teams. My consulting work has included GM, Calvin Klein Golf, PepsiCo and more — big-company complexity, small-team ingenuity, and the occasional spreadsheet with ideas of its own.</p>
+          <p>The consulting keeps me close to the work. The shows let me ask how it actually went, then share the useful bits (and, occasionally, the bits that make a good story).</p>
+          <p class="client-label">Selected consulting experience</p>
+          <ul class="client-logos" aria-label="Selected consulting experience">
+            <li class="client-mark"><img src="https://media.gm.com/content/dam/Shared/Images/Logos/gm/GM_Brandmark_Wordmark_Lockup_Blue_Horizontal_RGB.jpg" alt="General Motors" width="1890" height="400" loading="lazy" /></li>
+            <li class="client-mark client-mark-ck" aria-label="Calvin Klein Golf">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Calvin_klein_logo.svg" alt="Calvin Klein" width="797" height="150" loading="lazy" />
+              <span>GOLF</span>
+            </li>
+            <li class="client-mark"><img src="https://digitalassets.pepsico.com/transform/7c417867-1251-4602-8b69-1ea452a03bbe/Pepsico-logo-footer?q=75&w=3840" alt="PepsiCo" width="2000" height="608" loading="lazy" /></li>
+          </ul>
+          <p class="brand-note">Logos identify past client work; each belongs to its respective owner. No endorsement implied.</p>
+          <a class="button button-quiet consult-cta" href="mailto:vinny@vinnyandco.com?subject=Consulting%20enquiry">Talk consulting <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
     <section class="wrap section involvement">
       <div class="involve-copy">
         <p class="grid-label">Come on the show</p>
@@ -151,6 +177,23 @@ import Base from '../layouts/Base.astro';
 .read-grid p:not(.kicker) { max-width: 620px; color: var(--grey); }
 .button-paper { color: var(--black); background: var(--tan); white-space: nowrap; }
 .button-paper:hover, .button-paper:focus-visible { background: #f0d8b0; }
+.consulting-section { padding: 74px 0; background: linear-gradient(115deg, #171c38 0%, #101326 56%, #0A0A0A 100%); border-top: 1px solid rgba(210,180,140,.2); border-bottom: 1px solid rgba(232,39,42,.28); }
+.consulting-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 52px; align-items: center; }
+.consulting-portrait { margin: 0; }
+.consulting-portrait img { display: block; width: 100%; max-width: 360px; aspect-ratio: 2 / 3; object-fit: cover; object-position: center 22%; border: 1px solid rgba(210,180,140,.58); box-shadow: 14px 14px 0 rgba(10,10,10,.45); }
+.consulting-portrait figcaption { max-width: 360px; margin-top: 16px; color: var(--grey); font-family: var(--mono); font-size: .68rem; line-height: 1.6; letter-spacing: .06em; }
+.consulting-copy h2 { margin: 10px 0 18px; color: var(--paper); font-family: var(--display); font-size: clamp(2.2rem, 4.5vw, 3.7rem); line-height: 1.03; }
+.consulting-copy h2 em { color: #ff6b6d; font-style: normal; }
+.consulting-copy > p:not(.kicker):not(.client-label):not(.brand-note) { max-width: 700px; color: #c1c1c4; }
+.client-label { margin: 28px 0 12px; color: var(--tan); font-family: var(--mono); font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; }
+.client-logos { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+.client-mark { min-height: 76px; padding: 14px 16px; display: flex; align-items: center; justify-content: center; background: #f4f3ef; border: 1px solid rgba(210,180,140,.42); }
+.client-mark img { display: block; max-width: 100%; max-height: 46px; width: auto; height: auto; object-fit: contain; }
+.client-mark-ck { flex-direction: column; gap: 4px; }
+.client-mark-ck img { width: 100%; max-width: 170px; max-height: 30px; }
+.client-mark-ck span { color: #111; font-family: var(--mono); font-size: .56rem; font-weight: 700; letter-spacing: .28em; line-height: 1; }
+.brand-note { margin: 10px 0 0; color: #858594; font-size: .73rem; }
+.consult-cta { margin-top: 20px; }
 .involvement { display: grid; grid-template-columns: 1.4fr .6fr; gap: 50px; align-items: center; }
 .involvement h2 { margin-top: 0; }
 .involvement p:not(.grid-label) { max-width: 660px; color: #c1c1c4; }
