@@ -21,10 +21,10 @@ const published = bodies[essay.slug] || null;
  * Add `body: [ 'para', 'para' ]` and/or `url: '...'` to an essay in
  * src/data/vinland.js and this page changes state on its own.
  */
-const paragraphs = (published && published.body) || essay.body || [];
-const hasBody = Array.isArray(paragraphs) && paragraphs.length > 0;
+const hasBody = !!(published && typeof published.html === 'string' && published.html.length > 0);
 const hero = published && published.hero;
 const elsewhere = !hasBody && !!essay.url;
+const migrating = /migrating in/i.test(essay.status);
 const siblings = region.essays.filter(e => e.slug !== essay.slug);
 ---
 <Base title={`${essay.title} — VINLAND | The V Spot Network`} description={essay.teaser} type="Article">
@@ -39,10 +39,12 @@ const siblings = region.essays.filter(e => e.slug !== essay.slug);
       </figure>
     )}
 
+    {hasBody && published.sourceUrl && (
+      <p class="source-note">Originally published on <a href={published.sourceUrl} rel="noopener noreferrer">The V Spot on Substack</a>; now hosted here on VINLAND.</p>
+    )}
+
     {hasBody && (
-      <article class="essaybody">
-        {paragraphs.map(p => <p>{p}</p>)}
-      </article>
+      <article class="essaybody" set:html={published.html}></article>
     )}
 
     {elsewhere && (
@@ -54,8 +56,8 @@ const siblings = region.essays.filter(e => e.slug !== essay.slug);
 
     {!hasBody && !elsewhere && (
       <div class="elsewhere">
-        <p>Commissioned and in the works. This URL is permanent, and the essay arrives here first, before the newsletter.</p>
-        <a class="readbtn" href="/subscribe/">Get it when it lands →</a>
+        <p>{migrating ? 'This essay is on the VINLAND map and is being brought into its permanent home.' : 'Commissioned and in the works. This URL is permanent, and the essay arrives here first, before the newsletter.'}</p>
+        <a class="readbtn" href="/subscribe/">{migrating ? 'Get the next dispatch →' : 'Get it when it lands →'}</a>
       </div>
     )}
 
@@ -86,7 +88,14 @@ const siblings = region.essays.filter(e => e.slug !== essay.slug);
   .essayhero { margin: 22px 0 0; max-width: 66ch; }
   .essayhero img { display: block; width: 100%; height: auto; border: 1px solid rgba(210,180,140,.2); }
   .essaybody { max-width: 66ch; margin-top: 22px; }
-  .essaybody p { font-size: 1.05rem; line-height: 1.72; margin: 0 0 1.15em; }
+  .source-note { max-width: 66ch; margin-top: 20px; color: #8a8f9c; font-size: .88rem; }
+  .source-note a { color: #D2B48C; }
+  .essaybody { max-width: 66ch; margin-top: 22px; }
+  .essaybody :global(p) { font-size: 1.05rem; line-height: 1.72; margin: 0 0 1.15em; }
+  .essaybody :global(h2), .essaybody :global(h3) { color: #D2B48C; margin: 1.8em 0 .7em; }
+  .essaybody :global(img) { display: block; max-width: 100%; height: auto; margin: 1.5em auto; }
+  .essaybody :global(figure) { margin: 1.6em 0; }
+  .essaybody :global(figcaption) { color: #A0A0A0; font-size: .8rem; }
   .elsewhere { margin-top: 24px; padding: 18px 20px; background: #10132A; border-left: 3px solid #D2B48C; max-width: 62ch; }
   .elsewhere p { margin: 0 0 14px; color: #8a8f9c; font-size: .95rem; line-height: 1.55; }
   .readbtn { display: inline-block; padding: 9px 16px; background: #E8272A; color: #0A0A0A; font-weight: 700; font-size: .88rem; letter-spacing: .04em; text-decoration: none; }
