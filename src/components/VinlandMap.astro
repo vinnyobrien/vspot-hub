@@ -84,37 +84,7 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
       <h2 id="vmap-h">Where do you want to land?</h2>
       <p>Choose a territory on the chart to open its essays, or plot a course through connected ideas.</p>
     </div>
-    <span class="chart-count">${essays.length} essays · ${regions.length} territories</span>
-  </div>
-
-  <div class="chart-tools">
-    <label class="chart-search">
-      <span>Find a title or idea</span>
-      <input type="search" placeholder="Try “AI”, “marketplaces”, “friction”…" aria-label="Search VINLAND essays" data-vinland-search />
-    </label>
-    <div class="search-results" data-search-results hidden aria-live="polite">
-      <p class="vp-kicker">MATCHING LANDFALLS</p>
-      <div class="search-result-list">
-        {essays.map(e => (
-          <a href={`/vinland/${e.slug}/`} data-search-item data-search-text={`${e.title} ${e.teaser || ''} ${e.regionName}`.toLowerCase()} data-search-region={slug(e.regionName)} hidden>
-            <span>{e.title}</span><small>{e.regionName.replace(/^The /, '')}</small>
-          </a>
-        ))}
-      </div>
-      <p class="search-empty" data-search-empty hidden>No landfall found for that phrase. Try a territory or a broader idea.</p>
-    </div>
-    <div class="course-picker" aria-label="Plot a course">
-      <p class="vp-kicker">PLOT A COURSE</p>
-      <div class="course-list">
-        {routes.map(route => (
-          <button type="button" class="course-card" data-route-trigger={route.slug} aria-pressed="false">
-            <span class="course-title">{route.title}</span>
-            <span class="course-meta">{route.entries.length} stops</span>
-            <span class="course-desc">{route.line}</span>
-          </button>
-        ))}
-      </div>
-    </div>
+    <span class="chart-count">{essays.length} essays · {regions.length} territories</span>
   </div>
 
   <div class="vmap-stage">
@@ -228,7 +198,36 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
       <figcaption>CHARTED FROM TRALEE · SELECT A LANDMASS TO MAKE LANDFALL</figcaption>
     </figure>
 
-    <aside class="vmap-panel" aria-live="polite" aria-label="Selected essays">
+    <aside class="vmap-panel" aria-live="polite" aria-label="Chart navigation and selected essays">
+      <div class="chart-tools">
+          <label class="chart-search">
+            <span>Find a title or idea</span>
+            <input type="search" placeholder="Try “AI”, “marketplaces”, “friction”…" aria-label="Search VINLAND essays" data-vinland-search />
+          </label>
+          <div class="search-results" data-search-results hidden aria-live="polite">
+            <p class="vp-kicker">MATCHING LANDFALLS</p>
+            <div class="search-result-list">
+              {essays.map(e => (
+                <a href={`/vinland/${e.slug}/`} data-search-item data-search-text={`${e.title} ${e.teaser || ''} ${e.regionName}`.toLowerCase()} data-search-region={slug(e.regionName)} hidden>
+                  <span>{e.title}</span><small>{e.regionName.replace(/^The /, '')}</small>
+                </a>
+              ))}
+            </div>
+            <p class="search-empty" data-search-empty hidden>No landfall found for that phrase. Try a territory or a broader idea.</p>
+          </div>
+          <div class="course-picker" aria-label="Plot a course">
+            <p class="vp-kicker">PLOT A COURSE</p>
+            <div class="course-list">
+              {routes.map(route => (
+                <button type="button" class="course-card" data-route-trigger={route.slug} aria-pressed="false">
+                  <span class="course-title">{route.title}</span>
+                  <span class="course-meta">{route.entries.length} stops</span>
+                  <span class="course-desc">{route.line}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
       <div class="vpanel vpanel-idle" data-panel="idle">
         <p class="vp-kicker">CHART TABLE · READY</p>
         <h3>Pick a landfall</h3>
@@ -282,20 +281,20 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
   .vmap-head p:not(.vp-kicker) { color:#a0a0a0; font-size:.98rem; margin:0; max-width:64ch; }
   .chart-count,.vp-kicker { font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em; color:#D2B48C; font-size:.66rem; }
   .chart-count { white-space:nowrap; padding:8px 10px; border:1px solid rgba(210,180,140,.28); }
-  .chart-tools { position:relative; display:grid; grid-template-columns:minmax(230px,.72fr) minmax(0,1.6fr); gap:16px; margin-bottom:16px; }
+  .chart-tools { position:relative; display:grid; grid-template-columns:1fr; gap:12px; margin:0 0 20px; }
   .chart-search { display:block; padding:14px 16px; background:#10132A; border:1px solid rgba(210,180,140,.2); }
   .chart-search span { display:block; font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em; font-size:.65rem; color:#D2B48C; margin-bottom:8px; }
   .chart-search input { width:100%; border:1px solid #353a55; background:#090d1d; color:#F3F1EC; padding:11px 12px; font:inherit; font-size:.92rem; outline:none; }
   .chart-search input:focus { border-color:#E8272A; box-shadow:0 0 0 2px rgba(232,39,42,.2); }
   .course-picker { background:#10132A; border:1px solid rgba(210,180,140,.2); padding:12px 14px; min-width:0; }
   .course-picker > .vp-kicker { margin:0 0 9px; }
-  .course-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
-  .course-card { appearance:none; text-align:left; display:flex; flex-direction:column; align-items:flex-start; gap:4px; padding:10px 11px; background:#161B36; border:1px solid #2a3050; border-top:2px solid #D2B48C; color:#F3F1EC; cursor:pointer; font:inherit; min-height:92px; }
+  .course-list { display:grid; grid-template-columns:1fr; gap:7px; }
+  .course-card { appearance:none; text-align:left; display:grid; grid-template-columns:1fr auto; align-items:start; gap:3px 8px; padding:9px 10px; background:#161B36; border:1px solid #2a3050; border-left:2px solid #D2B48C; color:#F3F1EC; cursor:pointer; font:inherit; min-height:0; }
   .course-card:hover,.course-card:focus-visible,.course-card[aria-pressed="true"] { border-top-color:#E8272A; background:#1d2342; outline:none; }
   .course-title { font-family:var(--display); color:#D2B48C; font-size:.99rem; line-height:1.15; }
   .course-meta { font-family:var(--mono); color:#E8272A; font-size:.59rem; letter-spacing:.16em; text-transform:uppercase; }
-  .course-desc { color:#a0a0a0; font-size:.74rem; line-height:1.35; }
-  .search-results { position:absolute; z-index:10; top:74px; left:0; width:min(420px,100%); max-height:430px; overflow:auto; background:#10132A; border:1px solid #D2B48C; box-shadow:0 18px 50px rgba(0,0,0,.55); padding:14px; }
+  .course-desc { grid-column:1/-1; color:#a0a0a0; font-size:.72rem; line-height:1.32; }
+  .search-results { position:absolute; z-index:10; top:72px; left:0; width:100%; max-height:340px; overflow:auto; background:#10132A; border:1px solid #D2B48C; box-shadow:0 18px 50px rgba(0,0,0,.55); padding:14px; }
   .search-results[hidden] { display:none; }
   .search-results > .vp-kicker { margin:0 0 8px; }
   .search-result-list { display:grid; gap:5px; }
@@ -333,7 +332,7 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
   .rose text { font-size:12px; fill:#D2B48C; letter-spacing:.1em; }
   .cartouche rect { fill:#C9B48A; stroke:#4A3C22; stroke-width:1.6; } .cartouche .inner { fill:none; stroke:#4A3C22; stroke-opacity:.5; stroke-width:.8; }
   .cartouche .ct { font-size:27px; font-weight:800; letter-spacing:.16em; fill:#3B2E16; } .cartouche .cs { font-size:8px; letter-spacing:.24em; fill:#6B5836; }
-  .vmap-panel { min-width:0; max-height:740px; overflow:auto; padding:22px; background:#10132A; border:1px solid rgba(210,180,140,.2); border-left:0; }
+  .vmap-panel { min-width:0; max-height:740px; overflow:auto; padding:18px; background:#10132A; border:1px solid rgba(210,180,140,.2); border-left:0; }
   .vpanel[hidden] { display:none; } .vpanel .vp-kicker { margin:0 0 8px; }
   .vpanel h3 { font:clamp(1.25rem,2vw,1.75rem)/1.1 var(--display); color:#D2B48C; margin:0 0 8px; }
   .vp-line { color:#a0a0a0; font-size:.91rem; line-height:1.5; margin:0 0 16px; }
@@ -351,8 +350,8 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
   .route-steps a { text-decoration:none; } .route-steps a:hover .vp-title { color:#D2B48C; }
   .route-region { display:block; margin-top:4px; color:#8a8f9c; font: .58rem var(--mono); letter-spacing:.14em; text-transform:uppercase; }
   .vmap-uncharted { font-size:.82rem; color:#8a8f9c; margin-top:10px; }
-  @media(max-width:900px) { .chart-tools { grid-template-columns:1fr; } .course-list { grid-template-columns:repeat(3,minmax(0,1fr)); } .vmap-stage { grid-template-columns:1fr; } .vmap-frame { border-bottom:0; } .vmap-panel { max-height:none; border-left:1px solid rgba(210,180,140,.2); border-top:0; } }
-  @media(max-width:580px) { .vmap-head { align-items:flex-start; flex-direction:column; gap:8px; } .course-list { grid-template-columns:1fr; } .course-card { min-height:0; } .search-results { top:75px; width:100%; } .vmap-panel { padding:16px; } }
+  @media(max-width:900px) { .course-list { grid-template-columns:1fr; } .vmap-stage { grid-template-columns:1fr; } .vmap-frame { border-bottom:0; } .vmap-panel { max-height:none; border-left:1px solid rgba(210,180,140,.2); border-top:0; } }
+  @media(max-width:580px) { .vmap-head { align-items:flex-start; flex-direction:column; gap:8px; } .course-list { grid-template-columns:1fr; } .search-results { top:75px; width:100%; } .vmap-panel { padding:16px; } }
   @media(prefers-reduced-motion:reduce) { .terr .land,.terr .glow,.terr .halo,.vp-list a,.course-card { transition:none; } }
 </style>
 
