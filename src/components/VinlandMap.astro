@@ -386,9 +386,9 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
     });
     routeButtons.forEach(b => b.addEventListener('click', () => {
       const id = b.dataset.routeTrigger;
+      clearRoute();
       regionPanels.forEach(p => p.hidden = true);
       routePanels.forEach(p => p.hidden = p.dataset.coursePanel !== id);
-      clearRoute();
       const routeButton = routeButtons.find(x => x.dataset.routeTrigger === id);
       if (routeButton) routeButton.setAttribute('aria-current','true');
       const map = routeMaps.find(x => x.dataset.routeMap === id);
