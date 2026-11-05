@@ -40,7 +40,7 @@ const siblings = region.essays.filter(e => e.slug !== essay.slug);
     )}
 
     {hasBody && published.sourceUrl && (
-      <p class="source-note">Originally published on <a href={published.sourceUrl} rel="noopener noreferrer">The V Spot on Substack</a>; now hosted here on VINLAND.</p>
+      <p class="source-note">Adapted from <a href={published.sourceUrl} rel="noopener noreferrer">{published.sourceTitle || "the original essay"}</a>; presented here on VINLAND.</p>
     )}
 
     {hasBody && (
@@ -101,4 +101,11 @@ const siblings = region.essays.filter(e => e.slug !== essay.slug);
   .readbtn { display: inline-block; padding: 9px 16px; background: #E8272A; color: #0A0A0A; font-weight: 700; font-size: .88rem; letter-spacing: .04em; text-decoration: none; }
   .readbtn:hover { background: #D2B48C; }
   .alsohere { margin-top: 44px; }
+
+  .essaybody :global(.series-label) { font-family: var(--mono); font-size: .68rem; letter-spacing: .18em; color: #D2B48C; border-left: 2px solid #E8272A; padding-left: 12px; margin: 8px 0 22px; }
+  .essaybody :global(.series-nav) { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; max-width: 66ch; margin: 34px 0; padding: 16px 18px; background: #10132A; border-left: 3px solid #E8272A; color: #D2B48C; font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; }
+  .essaybody :global(.series-nav a) { color: #D2B48C; text-decoration: none; }
+  .essaybody :global(.series-nav a:hover) { color: #E8272A; }
+  .essaybody :global(.source-note-inline) { color: #8a8f9c; font-size: .84rem; border-top: 1px solid rgba(210,180,140,.18); padding-top: 14px; margin-top: 26px; }
+  .essaybody :global(.source-note-inline a) { color: #D2B48C; }
 </style>
