@@ -28,6 +28,10 @@ export const regions = [
     { slug: 'to-ai-cause-and-solution', title: 'To AI: The Cause of, and Solution to, All of Commerce\u2019s Problems', status: 'Migrated from Substack', teaser: 'With apologies to Homer Simpson: how the industry toasts its own disruptor.' },
     { slug: 'llms-ate-the-search-bar', title: 'LLMs Ate the Search Bar, Now What?', status: 'Migrated from Substack', teaser: 'Search was the front door of ecommerce for twenty years. The door just became a conversation.' },
     { slug: 'the-agentic-sunrise', title: 'The Agentic Sunrise', status: 'Migrated from Substack', teaser: 'What actually changes when the shopper sends software instead of showing up.' },
+    { slug: 'reformation-of-compute', title: 'The Reformation of Compute', status: 'Prisoners of Compute · Part 1 of 4', teaser: 'When a system becomes too complex to verify, authority gathers around its interpreters. Open weights make this a Reformation story.' },
+    { slug: 'compute-tithe', title: 'The Compute Tithe', status: 'Prisoners of Compute · Part 2 of 4', teaser: 'A $5.5 trillion build-out, debt, hidden lease commitments and a circular investment story. Bubble and infrastructure can both be true.' },
+    { slug: 'map-beneath-cloud', title: 'The Map Beneath the Cloud', status: 'Prisoners of Compute · Part 3 of 4', teaser: 'AI is sold as placeless. Its real dependencies are intensely physical: electricity, water, land, chips, lithography and cables.' },
+    { slug: 'who-owns-the-rails', title: 'Who Owns the Rails?', status: 'Prisoners of Compute · Part 4 of 4', teaser: 'Americans and Europeans read the AI boom from different balance sheets. Governments are joining the story, while merchants still need the rails.' },
     { slug: 'definitely-maybe', title: 'Definitely Maybe', status: 'Commissioned \u00b7 in the works', teaser: 'Everyone wants the agent. Nobody wants the plumbing. On data architecture as the prerequisite for AI rather than the consequence of it.' },
   ]},
   { name: 'The Payment Rivers', line: 'The money moves through every region. Consolidation, BNPL, and who owns the current.', essays: [

@@ -11,6 +11,12 @@
 - THOUGHT/COMMERCIAL grid: governance framework for evaluating media and consulting projects.
 - Cross-Atlantic lens: reading EU commerce developments through a North American frame, and vice versa.
 
+## VINLAND
+- [The Reformation of Compute](https://thevspotnews.com/vinland/reformation-of-compute/): Part 1 of Prisoners of Compute, on open models and interpretive authority.
+- [The Compute Tithe](https://thevspotnews.com/vinland/compute-tithe/): Part 2, on AI capital expenditure, debt and infrastructure cycles.
+- [The Map Beneath the Cloud](https://thevspotnews.com/vinland/map-beneath-cloud/): Part 3, on the physical geography beneath AI.
+- [Who Owns the Rails?](https://thevspotnews.com/vinland/who-owns-the-rails/): Part 4, on transatlantic investment, sovereignty and commerce infrastructure.
+
 ## About
 - [About Vinny O'Brien](https://thevspotnews.com/about/): 15+ years ecommerce operator (eBay, Arnotts), consultant to $100M+ brands, media founder.
 

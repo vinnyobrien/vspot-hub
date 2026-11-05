@@ -40,7 +40,7 @@ const siblings = region.essays.filter(e => e.slug !== essay.slug);
     )}
 
     {hasBody && published.sourceUrl && (
-      <p class="source-note">Originally published on <a href={published.sourceUrl} rel="noopener noreferrer">The V Spot on Substack</a>; now hosted here on VINLAND.</p>
+      <p class="source-note">Adapted from <a href={published.sourceUrl} rel="noopener noreferrer">{published.sourceTitle || "the original essay"}</a>; presented here on VINLAND.</p>
     )}
 
     {hasBody && (
