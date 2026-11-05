@@ -25,6 +25,7 @@ export const regions = [
     { slug: 'uk-retail-index-data-and-delusion', title: 'The UK Retail Index: Data and Delusion', status: 'Migrated from Substack', teaser: 'What UK retail\u2019s numbers actually say, versus what everyone keeps insisting they say.' },
   ]},
   { name: 'The Machine Frontier', line: 'Newly mapped territory. Agents, LLMs, and commerce\u2019s favourite cause of and solution to all its problems.', essays: [
+    { slug: 'arming-the-rebels', title: 'Arming the Rebels: From Montreal to the Death Star and Back', status: 'Published · VSpot Media', teaser: 'A comic, personal map of commerce software: rebel promises, enterprise confusion, product sameness and the agents arriving to inherit the rules.', url: '/stories/arming-the-rebels/' },
     { slug: 'to-ai-cause-and-solution', title: 'To AI: The Cause of, and Solution to, All of Commerce\u2019s Problems', status: 'Migrated from Substack', teaser: 'With apologies to Homer Simpson: how the industry toasts its own disruptor.' },
     { slug: 'llms-ate-the-search-bar', title: 'LLMs Ate the Search Bar, Now What?', status: 'Migrated from Substack', teaser: 'Search was the front door of ecommerce for twenty years. The door just became a conversation.' },
     { slug: 'the-agentic-sunrise', title: 'The Agentic Sunrise', status: 'Migrated from Substack', teaser: 'What actually changes when the shopper sends software instead of showing up.' },
