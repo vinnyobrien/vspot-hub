@@ -299,6 +299,7 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
   .search-results > .vp-kicker { margin:0 0 8px; }
   .search-result-list { display:grid; gap:5px; }
   .search-result-list a { display:flex; justify-content:space-between; gap:12px; padding:9px 10px; color:#F3F1EC; background:#161B36; text-decoration:none; font-size:.85rem; }
+  .search-result-list a[hidden] { display:none; }
   .search-result-list a:hover,.search-result-list a:focus-visible { background:#252c4d; outline:1px solid #E8272A; }
   .search-result-list small { color:#D2B48C; font-family:var(--mono); font-size:.59rem; text-transform:uppercase; white-space:nowrap; }
   .search-empty { color:#a0a0a0; font-size:.82rem; margin:10px 0 2px; }
@@ -410,7 +411,10 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
         }
         let count = 0;
         searchItems.forEach(item => {
-          const match = item.dataset.searchText.includes(q);
+          const text = item.dataset.searchText;
+          const words = text.split(/[^a-z0-9]+/).filter(Boolean);
+          const terms = q.split(/[^a-z0-9]+/).filter(Boolean);
+          const match = terms.length > 0 && terms.every(term => term.length <= 2 ? words.includes(term) : text.includes(term));
           item.hidden = !match;
           if (match) count++;
         });
