@@ -2,36 +2,17 @@
 import Base from '../layouts/Base.astro';
 import VinlandMap from '../components/VinlandMap.astro';
 import { regions } from '../data/vinland.js';
-
+const essayCount = regions.reduce((sum, region) => sum + region.essays.length, 0);
 ---
-<Base title="VINLAND — The V Spot Network" description="The map of Vinny O'Brien's long-form essays on commerce, organised as territories: marketplaces, regulation, the Atlantic divide, AI, payments, and the humans doing the work." type="CollectionPage">
+<Base title="VINLAND — The V Spot Network" description="The charted archive of Vinny O'Brien: essays on commerce, marketplaces, technology, people and power. Choose a territory or plot a course through the ideas." type="CollectionPage">
   <main class="wrap page">
-    <p class="kicker">Territory of ideas</p>
+    <p class="kicker">Territory of ideas · Chart room</p>
     <h1>VINLAND</h1>
-    <p style="max-width:70ch">The long-form essays of the network, charted as territories. Eight regions, one canonical URL per essay, forever. New landfalls added as they're written; old pieces migrate in from the Substack with their permanent addresses.</p>
-
+    <p class="vinland-intro">A chart of ideas from Tralee. {essayCount} essays across eight territories. Pick a landfall to explore a subject, or plot a course and follow the argument across the map.</p>
     <VinlandMap regions={regions} />
-
-    <p class="grid-label" style="margin-top:34px">The full index</p>
-    <p class="muted" style="margin-top:-8px; color:#8a8f9c; font-size:.92rem">Every essay, in territory order. The map above is the same list, drawn.</p>
-
-    {regions.map(r => (
-      <>
-        <p class="grid-label">{r.name}</p>
-        <p class="muted" style="margin-top:-8px; color:#8a8f9c; font-size:.92rem">{r.line}</p>
-        <div class="programming" style="margin-top:14px">
-          {r.essays.map(e => (
-            <a class="slot" href={`/vinland/${e.slug}/`} style="--accent:#D2B48C">
-              <div class="body">
-                <span class="time">Essay</span>
-                <h3 style="font-size:1.25rem">{e.title}</h3>
-                <span class="status">{e.status}</span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </>
-    ))}
-    <div style="height:64px"></div>
+    <div style="height:48px"></div>
   </main>
 </Base>
+<style>
+  .vinland-intro { max-width:68ch; color:#c9cdd8; font-size:1.08rem; line-height:1.65; }
+</style>
