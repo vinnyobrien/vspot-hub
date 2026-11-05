@@ -134,7 +134,7 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
         const water = g.kind === 'water';
         return (
           <g class="terr" data-region={slug(r.name)} role="button" tabindex="0"
-             aria-label={`${r.name}. ${r.essays.length} essays.`} aria-pressed="false">
+             aria-label={`${r.name}. ${r.essays.length} essays.`} aria-current="false">
             <path d={g.d} class="glow" filter="url(#soft)" />
             <path d={g.d} class={water ? 'strait' : 'land'} filter="url(#rough)" />
             {!water && <path d={g.d} class="hatchfill" filter="url(#rough)" />}
@@ -219,7 +219,7 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
             <p class="vp-kicker">PLOT A COURSE</p>
             <div class="course-list">
               {routes.map(route => (
-                <button type="button" class="course-card" data-route-trigger={route.slug} aria-pressed="false">
+                <button type="button" class="course-card" data-route-trigger={route.slug} aria-current="false">
                   <span class="course-title">{route.title}</span>
                   <span class="course-meta">{route.entries.length} stops</span>
                   <span class="course-desc">{route.line}</span>
@@ -290,7 +290,7 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
   .course-picker > .vp-kicker { margin:0 0 9px; }
   .course-list { display:grid; grid-template-columns:1fr; gap:7px; }
   .course-card { appearance:none; text-align:left; display:grid; grid-template-columns:1fr auto; align-items:start; gap:3px 8px; padding:9px 10px; background:#161B36; border:1px solid #2a3050; border-left:2px solid #D2B48C; color:#F3F1EC; cursor:pointer; font:inherit; min-height:0; }
-  .course-card:hover,.course-card:focus-visible,.course-card[aria-pressed="true"] { border-top-color:#E8272A; background:#1d2342; outline:none; }
+  .course-card:hover,.course-card:focus-visible,.course-card[aria-current="true"] { border-top-color:#E8272A; background:#1d2342; outline:none; }
   .course-title { font-family:var(--display); color:#D2B48C; font-size:.99rem; line-height:1.15; }
   .course-meta { font-family:var(--mono); color:#E8272A; font-size:.59rem; letter-spacing:.16em; text-transform:uppercase; }
   .course-desc { grid-column:1/-1; color:#a0a0a0; font-size:.72rem; line-height:1.32; }
@@ -355,9 +355,9 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
   @media(prefers-reduced-motion:reduce) { .terr .land,.terr .glow,.terr .halo,.vp-list a,.course-card { transition:none; } }
 </style>
 
-<script is:inline>
+<script>
   (function () {
-    const root = document.currentScript.closest('section.vmap');
+    const root = document.querySelector('section.vmap');
     if (!root) return;
     const terrs = [...root.querySelectorAll('.terr')];
     const regionPanels = [...root.querySelectorAll('[data-panel]')];
@@ -371,13 +371,13 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
     function clearRoute() {
       routePanels.forEach(p => p.hidden = true);
       routeMaps.forEach(p => p.hidden = true);
-      routeButtons.forEach(b => b.setAttribute('aria-pressed','false'));
+      routeButtons.forEach(b => b.setAttribute('aria-current','false'));
       terrs.forEach(t => delete t.dataset.routeActive);
     }
     function showRegion(id) {
       clearRoute();
       regionPanels.forEach(p => p.hidden = p.dataset.panel !== id);
-      terrs.forEach(t => { const active = t.dataset.region === id; t.dataset.active = String(active); t.setAttribute('aria-pressed',String(active)); });
+      terrs.forEach(t => { const active = t.dataset.region === id; t.dataset.active = String(active); t.setAttribute('aria-current',active ? 'location' : 'false'); });
     }
     terrs.forEach(t => {
       const activate = () => showRegion(t.dataset.region);
@@ -390,7 +390,7 @@ const rhumbs = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
       routePanels.forEach(p => p.hidden = p.dataset.coursePanel !== id);
       clearRoute();
       const routeButton = routeButtons.find(x => x.dataset.routeTrigger === id);
-      if (routeButton) routeButton.setAttribute('aria-pressed','true');
+      if (routeButton) routeButton.setAttribute('aria-current','true');
       const map = routeMaps.find(x => x.dataset.routeMap === id);
       if (map) map.hidden = false;
       const route = root.querySelector(`[data-course-panel="${id}"]`);
