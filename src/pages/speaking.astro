@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Speaking & Event Hosting | Vinny O'Brien" description="Book Vinny O'Brien for keynotes, panels and event hosting on ecommerce, AI, technology and the human side of change." type="WebPage">
+  <main class="wrap speaking">
+    <header>
+      <p class="kicker">Speaking · Panels · Event hosting</p>
+      <h1>Ideas with a point of view.<br /><span>And a microphone that works.</span></h1>
+      <p class="standfirst">I turn the arguments from my essays and years in commerce into talks for people making decisions about technology, retail and work.</p>
+      <p>I'm Vinny O’Brien, an e-commerce operator, consultant and media producer based in County Kerry. I work across Europe and North America, and host conversations through The V Spot Network. I speak from the operator's side of the table: interested in the promise, alert to the mess, and more curious about what changes on Monday than what looks good in the launch video.</p>
+      <div class="actions">
+        <a class="button primary" href="/book/">Enquire about a keynote</a>
+        <a class="button secondary" href="/sponsors/">Explore V Spot partnerships</a>
+      </div>
+    </header>
+    <section>
+      <p class="grid-label">The first three talks</p>
+      <div class="talks">
+        <article><span class="number">01 / TECHNOLOGY &amp; PEOPLE</span><h2>Has technology outpaced the human need for it?</h2><p>AI and automation are moving quickly. The harder question is whether the tools are solving problems people actually have—or creating a very expensive new category of explanation.</p><p class="aside">For leadership teams, technology events and commerce conferences.</p></article>
+        <article><span class="number">02 / COMMERCE &amp; VALUE</span><h2>Friction as Currency</h2><p>We have spent years trying to remove friction from commerce. Some friction is waste; some is trust, discovery and choice. The challenge is knowing which is which before you optimise the humanity out of the experience.</p><p class="aside">For retail, ecommerce and customer-experience audiences.</p></article>
+        <article><span class="number">03 / PRACTICAL AI</span><h2>Before you add AI, diagnose the business</h2><p>When teams face sprawling platforms, overlapping licences and AI appearing in every menu, the answer is not another demo. Start with the real work, the cost and the customer problem; then decide what to automate.</p><p class="aside">For operators and teams responsible for transformation.</p></article>
+      </div>
+    </section>
+    <section class="host-options">
+      <p class="grid-label">On stage, or in the room</p>
+      <h2>Keynotes, panels and hosting</h2>
+      <p>Each talk can be adapted to the audience and event format. I’m also available to host panels, moderate operator discussions and build a lively, informed room around your event.</p>
+      <p>Tell me the audience, the brief and what you want people to leave thinking about. I’ll come back with the right shape, fee and practical requirements.</p>
+      <a class="button primary" href="/book/">Talk through a speaking brief</a>
+    </section>
+  </main>
+</Base>
+<style>
+.speaking { padding-top: 54px; padding-bottom: 76px; }
+.speaking header { max-width: 900px; padding: 24px 0 50px; }
+.kicker,.number { font: 700 .75rem/1.5 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--tan); }
+.speaking h1 { font: clamp(2.8rem,7vw,5.4rem)/1.04 var(--display); margin: 16px 0 20px; }
+.speaking h1 span { color: #ff7c7e; }
+.standfirst { font-size: 1.35rem; color: var(--tan); max-width: 800px; margin-bottom: 18px; }
+.speaking header > p:not(.kicker):not(.standfirst) { max-width: 780px; color: #d0d1da; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.button { display: inline-block; padding: 12px 18px; text-decoration: none; font: 700 .76rem/1.3 var(--mono); letter-spacing: .05em; text-transform: uppercase; border: 1px solid var(--tan); }
+.button.primary { background: var(--red); border-color: var(--red); color: white; }
+.button.secondary { color: var(--paper); }
+.button:hover,.button:focus-visible { outline: 2px solid var(--tan); outline-offset: 3px; }
+.talks { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 16px; }
+.talks article { background: #12172d; border: 1px solid #343a58; padding: 24px; }
+.talks h2 { font: 1.5rem/1.2 var(--display); margin: 14px 0; }
+.talks p { color: #d0d1da; }
+.talks .aside { color: var(--grey); font-size: .9rem; margin-top: 12px; }
+.host-options { margin-top: 64px; padding: 28px; background: #11162d; border-left: 3px solid var(--red); }
+.host-options h2 { font: 2rem/1.2 var(--display); margin: 12px 0; }
+.host-options p { max-width: 780px; color: #d0d1da; margin: 10px 0; }
+.host-options .button { margin-top: 16px; }
+</style>
