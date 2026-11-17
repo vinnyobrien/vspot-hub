@@ -1,0 +1,83 @@
+---
+const programmes = [
+  { num: "01", title: "December pilot", tag: "FOUR WEEKS", body: "Four weekly editions of The V-Spot News. A focused way to test the editorial chemistry, sharpen the message and see what the audience responds to." },
+  { num: "02", title: "A monthly B2B room", tag: "2027", body: "A proposed six-month Have I Got Ecomm News for You? partnership, bringing senior voices into lively, useful conversations about investment, services and capability." },
+  { num: "03", title: "Make the data playable", tag: "IDEA TO EXPERIENCE", body: "Start with a Prodapt dataset or existing content. Find the story, then shape it into a game, an event moment or a repeatable content series." },
+];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="referrer" content="no-referrer" />
+  <title>Prodapt | Your V-Spot Media Backstage Pass</title>
+  <meta name="description" content="A private working invitation for Prodapt to explore a media and creative partnership with V-Spot Media." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&family=Archivo:wght@400;600;700;900&family=Space+Mono&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#1A1F3C;--red:#E8272A;--tan:#D2B48C;--paper:#F3F1EC;--ink:#0A0A0A;--muted:#b9bbc3}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font:17px/1.6 Archivo,Arial,sans-serif}
+    a{color:inherit}header{background:var(--navy);padding:18px max(5vw,24px);display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;border-bottom:3px solid var(--red)}
+    header b{font:26px 'Tilt Neon',Arial,sans-serif;letter-spacing:1px}header span,.eyebrow{font:11px 'Space Mono',monospace;letter-spacing:1.8px;text-transform:uppercase;color:var(--tan)}
+    .onair{color:#ff7777}main{overflow:hidden}.wrap{width:min(1100px,90%);margin:auto}
+    .hero{min-height:680px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,#0a0a0a 0%,#0a0a0ae8 48%,#0a0a0a55 100%),url('/brand/hero-backlot.jpg') center/cover}
+    .hero-inner{padding:88px 0;position:relative}.eyebrow{margin:0 0 15px}.hero h1,h2,h3{font-family:'Tilt Neon',Arial,sans-serif;line-height:1.06}
+    h1{font-size:clamp(58px,10vw,116px);max-width:900px;margin:10px 0 23px;letter-spacing:-2px}
+    h2{font-size:clamp(38px,5.5vw,64px);margin:10px 0 22px}h3{font-size:28px;margin:8px 0 12px}
+    .red{color:#ff5558}.lead{font-size:clamp(20px,2.5vw,27px);line-height:1.42;max-width:720px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin:27px 0}.chips span{padding:7px 13px;border:1px solid #96969a;border-radius:30px;color:var(--paper);font:12px Archivo,Arial,sans-serif;letter-spacing:.2px;text-transform:none}
+    .button{display:inline-block;padding:14px 22px;background:var(--red);font-weight:900;text-decoration:none;border-radius:3px}.button:hover{background:#bd151b}
+    .strip{background:var(--red);color:white;text-align:center;padding:24px 5%;font:clamp(17px,2.6vw,29px) 'Tilt Neon',Arial,sans-serif;letter-spacing:.7px}
+    .section{padding:78px 0;border-top:1px solid #383838}.intro{max-width:760px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{padding:26px;background:var(--navy);border:1px solid #484d64;min-height:265px}.card p{color:#ddd}.card .eyebrow{color:var(--tan)}
+    .quote{font-size:clamp(24px,3.2vw,38px);line-height:1.3;border-left:5px solid var(--red);padding-left:24px;max-width:880px}
+    .company{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}.company-note{background:var(--paper);color:var(--ink);padding:26px}.company-note p{max-width:600px}
+    .shows{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.show{padding:22px 20px;border-top:3px solid var(--red);background:#171717}.show b{display:block;font:22px 'Tilt Neon',Arial,sans-serif;margin-bottom:8px}
+    .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.text-link{display:inline-block;padding:11px 15px;border:1px solid #777;text-decoration:none;border-radius:2px}.text-link:hover{border-color:var(--tan);color:var(--tan)}
+    .camp{background:var(--navy);border-left:5px solid var(--tan);padding:25px 28px;display:grid;grid-template-columns:1.3fr .7fr;gap:24px}
+    .camp p{margin-top:0}.fine{font-size:12px;color:var(--muted);max-width:850px}
+    footer{padding:55px 5% 28px;color:var(--muted);border-top:1px solid #383838}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:760px){.hero{min-height:590px}.grid,.shows,.company,.camp{grid-template-columns:1fr}.section{padding:55px 0}.card{min-height:unset}h1{letter-spacing:-.5px}}
+  </style>
+</head>
+<body>
+  <header><b>THE V SPOT <span style="color:var(--red)">STUDIOS</span></b><span>PRODAPT / BACKSTAGE PASS</span><span class="onair">● ON AIR</span></header>
+  <main>
+    <section class="hero"><div class="wrap hero-inner">
+      <p class="eyebrow">A working invitation for Varun, Malavika and the Prodapt team</p>
+      <h1>THE STORY<br/>BEHIND <span class="red">THE SIGNAL.</span></h1>
+      <p class="lead">Let’s make complex telecom, AI and transformation ideas easier to understand — and much harder to forget.</p>
+      <div class="chips"><span>Telecom decision-makers</span><span>Independent editorial voice</span><span>Europe + North America</span></div>
+      <a class="button" href="#the-pass">Take the backstage tour ↘</a>
+    </div></section>
+    <div class="strip">GOOD B2B STORIES SHOULD FEEL LIKE A CONVERSATION, NOT A BROCHURE.</div>
+    <section class="section wrap" id="the-pass">
+      <p class="eyebrow">01 / THE PARTNERSHIP</p><h2>One sharp point of view.<br/><span class="red">Several ways to tell it.</span></h2>
+      <p class="intro">The strongest opening is the change Prodapt is already making: clearer services, an AI delivery model grounded in context and security, and a stronger focus on outcomes customers can measure. We can bring that story to market through useful editorial, senior voices and creative formats that invite people in.</p>
+      <p class="quote">The technology is the plot. The customer outcome is the story.</p>
+      <div class="grid">
+        {programmes.map(item => <article class="card"><p class="eyebrow">{item.num} / {item.tag}</p><h3>{item.title}</h3><p>{item.body}</p></article>)}
+      </div>
+    </section>
+    <section class="section"><div class="wrap company">
+      <div><p class="eyebrow">02 / THE RESEARCH</p><h2>What does B2B<br/>think it’s ready for?</h2><p class="intro">The YouGov survey can set the scene: what businesses are investing in, which services they expect to buy, and where internal capability is still catching up. We’ll map the findings carefully to Prodapt’s audience and confirm survey permissions before publication.</p><p class="fine">A first creative concept can be developed within 24 hours once the data, brief and usage permissions are in hand.</p></div>
+      <div class="company-note"><p class="eyebrow">A GOOD ROOM STARTS WITH A GOOD QUESTION</p><h3>Make the insight playable.</h3><p>A data point can become a live quiz, a Jeopardy-style round, a Family Fortunes reveal, a fantasy draft or a format made for the audience and the moment. The game is the invitation. The insight is what people take home.</p></div>
+    </div></section>
+    <section class="section wrap"><p class="eyebrow">03 / THE V SPOT MEDIA NETWORK</p><h2>Three rooms.<br/><span class="red">One curious audience.</span></h2>
+      <div class="shows">
+        <article class="show"><b>The V-Spot News</b><p>Fast ecommerce and retail news, told with a satirical edge and a clear point of view.</p></article>
+        <article class="show"><b>The Struggle Bus</b><p>Honest conversations about work, change, mistakes and the people behind the job titles.</p></article>
+        <article class="show"><b>The Ostrich Report</b><p>Operator-led analysis of marketplaces, commerce and the choices shaping the industry.</p></article>
+      </div>
+      <div class="links"><a class="text-link" href="/shows/nearly-news">See The V-Spot News ↗</a><a class="text-link" href="/shows/struggle-bus">Meet The Struggle Bus ↗</a><a class="text-link" href="/shows/ostrich-report">Read The Ostrich Report ↗</a></div>
+    </section>
+    <section class="section wrap"><p class="eyebrow">04 / THE NORTH AMERICAN QUESTION</p><h2>NRF is a possibility.<br/><span class="red">Audience fit comes first.</span></h2><p class="intro">NRF could create a useful North American moment, particularly if the goal is to extend the conversation into adjacent services and meet leaders who influence the next stage of investment. If Prodapt’s priority is a concentrated B2B telecom audience, we should also consider the first major B2B opportunity of the year. Any event coverage, dinner or travel would be scoped separately.</p></section>
+    <section class="section"><div class="wrap"><p class="eyebrow">05 / A SEPARATE CONVERSATION</p><h2>Camp Tralee.<br/><span class="red">A bigger programme.</span></h2><div class="camp"><div><p>There may be a larger opportunity to design a complete programme for Prodapt and its partner ecosystem — created for customers, prospects and senior decision-makers.</p><p>That could include audience strategy, partner participation, invitee curation, agenda and facilitation, an experience built around data, senior conversations, content capture and follow-up.</p></div><div><p class="eyebrow">CAMP TRALEE / SEPARATE SCOPE</p><p>Camp Tralee could be a starting point or a setting for a bespoke programme. This sits outside the proposed media partnership and would have its own brief, budget and production plan.</p><a class="text-link" href="https://camptralee.com" target="_blank" rel="noopener noreferrer">Explore Camp Tralee ↗</a></div></div></div></section>
+    <section class="section wrap"><p class="eyebrow">06 / HOW WE MOVE</p><h2>Start with December.<br/><span class="red">Earn the bigger idea.</span></h2><p class="intro">The four-week V-Spot News pilot gives both teams a month to work together, find the right editorial rhythm and learn what resonates. From there, we can agree the six-month 2027 plan, channel mix, guests and event calendar. The detailed scope and indicative commercial terms are in the accompanying proposal PDF.</p><p class="fine">This backstage pass is a discussion companion, not an agreement. Final scope, dates, rights and payment terms will be confirmed before contracting. V-Spot Media retains editorial control; Prodapt can review factual claims, brand use and confidential information before publication.</p><a class="button" href="mailto:vinny@vinnyandco.com?subject=Prodapt%20%2F%20V-Spot%20Media%20partnership">Continue the conversation ↗</a></section>
+  </main>
+  <footer><div class="wrap"><div><b>V SPOT MEDIA</b><p>Vinny and Co Consulting Limited · Company No. 640630<br/>Tralee, County Kerry, Ireland</p></div><p>Independent B2B media across ecommerce, retail and AI.<br/>For Prodapt / Varun Ravichandran + Malavika Sreejit / 2026</p><p><a href="https://thevspotnews.com">thevspotnews.com</a><br/>vinny@vinnyandco.com</p></div></footer>
+</body>
+</html>
