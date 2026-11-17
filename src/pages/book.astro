@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Testimonial from '../components/Testimonial.astro';
 ---
-<Base title="Book a Call — The Office of Murt Moriarty | The V Spot Network" description="Book a call with Vinny O'Brien: ecommerce, retail, marketplaces, and cross-Atlantic strategy. Bookings handled, reluctantly, by his agent." type="ContactPage">
+<Base title="Book a Call — E-commerce Consulting & Media | The V Spot Network" description="Talk with Vinny O'Brien about e-commerce AI, operations, marketplaces, project leadership, SaaS analysis, sponsorship or speaking." type="ContactPage">
   <main class="wrap page">
     <p class="kicker">Management · Representation · Light Catering</p>
     <h1>The Office of Murt Moriarty</h1>
@@ -26,7 +26,7 @@ import Testimonial from '../components/Testimonial.astro';
     <Testimonial full />
     <p class="grid-label">The booking sheet</p>
     <p class="muted" style="margin-top:-6px; color:#8a8f9c">Murt is no longer allowed near the calendar. Fill this in and Vinny himself comes back to you, usually within a day, occasionally from an airport.</p>
-    <form class="bookform" name="book-a-call" method="POST" action="/welcome/" data-netlify="true" netlify-honeypot="bot-field">
+    <form class="bookform" id="booking-sheet" name="book-a-call" method="POST" action="/welcome/" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="book-a-call" />
       <p class="hp"><label>Leave this empty <input name="bot-field" /></label></p>
       <label>Your name<input type="text" name="name" required /></label>
@@ -34,8 +34,10 @@ import Testimonial from '../components/Testimonial.astro';
       <label>Company (or glorious solo act)<input type="text" name="company" /></label>
       <label>What's it about?
         <select name="topic">
-          <option>Consulting: ecommerce / marketplaces / operations</option>
-          <option>Consulting: cross-border, EU/UK/US</option>
+          <option>AI &amp; automation for e-commerce operations</option>
+          <option>E-commerce operations project leadership</option>
+          <option>Market analysis or analyst-style work for a commerce SaaS company</option>
+          <option>Marketplaces and cross-border commerce</option>
           <option>Media: sponsorship or partnership</option>
           <option>Speaking: conference or event</option>
           <option>Something Murt wouldn't understand</option>
