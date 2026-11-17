@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Your Backstage Pass | The V Spot Network" description="An unlisted partner room for exploring V Spot sponsorships, editorial, live events and speaking." type="WebPage">
+  <main class="wrap backstage">
+    <header class="pass-hero">
+      <p class="kicker">The V Spot Network · Your backstage room</p>
+      <h1>The lights are on.<br /><span>Your chair is ready.</span></h1>
+      <p class="intro">A good partnership should feel like part of the show, not an advert that wandered in through the fire exit. This is a place to work out what would be useful for your audience, your team and the people we bring together.</p>
+      <p class="bulb-line" aria-hidden="true">✦ &nbsp; ON AIR &nbsp; ✦ &nbsp; ON LOCATION &nbsp; ✦ &nbsp; IN THE ROOM &nbsp; ✦</p>
+    </header>
+    <section class="room-grid" aria-label="Ways to work together">
+      <article><span class="number">01 / ON AIR</span><h2>Back a show</h2><p>Build a campaign across Nearly News, The Struggle Bus or The Ostrich Report, with the format, sponsor role and delivery agreed before production.</p><a href="/sponsors/">Explore partnership options →</a></article>
+      <article><span class="number">02 / ON LOCATION</span><h2>Join us in the room</h2><p>Explore live partnerships for Camp Tralee, NRF dinners and other commerce gatherings. Dates, venue and partner benefits are confirmed before commitment.</p><a href="/backstage/camp-tralee/">Camp Tralee partner interest →</a></article>
+      <article><span class="number">03 / ON STAGE</span><h2>Book a voice with a point of view</h2><p>Keynotes, panels and event hosting on commerce, AI, technology and the people asked to live with it.</p><a href="/speaking/">Speaking topics and enquiries →</a></article>
+    </section>
+    <section class="room-close">
+      <p class="kicker">The next step</p>
+      <h2>Tell us what you need the room to do.</h2>
+      <p>Share the audience, the goal and the timing. We’ll come back with a clear shape, the relevant rate card and a practical next step. No mystery deliverables. No surprise mascot appearances.</p>
+      <div class="actions">
+        <a class="button primary" href="/book/">Start a conversation</a>
+        <a class="button secondary" href="mailto:vinny@vinnyandco.com?subject=V%20Spot%20partner%20conversation">Email Vinny</a>
+      </div>
+    </section>
+  </main>
+</Base>
+<style>
+.backstage { padding-top: 48px; padding-bottom: 78px; }
+.pass-hero { max-width: 880px; padding: 20px 0 40px; }
+.kicker,.number { font: 700 .75rem/1.5 var(--mono); color: var(--tan); letter-spacing: .16em; text-transform: uppercase; }
+.pass-hero h1 { font: clamp(2.8rem,7vw,5.4rem)/1.04 var(--display); margin: 16px 0 20px; }
+.pass-hero h1 span { color: #ff7375; }
+.intro { font-size: 1.2rem; max-width: 790px; color: #d0d1da; }
+.bulb-line { border-top: 1px solid #3a405f; border-bottom: 1px solid #3a405f; color: var(--tan); font: .72rem/1.4 var(--mono); letter-spacing: .1em; padding: 12px 8px; margin-top: 28px; }
+.room-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 16px; }
+.room-grid article { background: #12172d; border: 1px solid #343a58; padding: 24px; }
+.room-grid h2 { font: 1.5rem/1.2 var(--display); margin: 14px 0; }
+.room-grid p,.room-close p:not(.kicker) { color: #d0d1da; }
+.room-grid a { display: inline-block; color: #ff8a8c; text-decoration: none; font-weight: 600; margin-top: 18px; }
+.room-grid a:hover,.room-grid a:focus-visible { text-decoration: underline; }
+.room-close { margin-top: 32px; padding: 28px; background: #11162d; border-left: 3px solid var(--red); }
+.room-close h2 { font: 1.8rem/1.2 var(--display); margin: 10px 0; }
+.actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+.button { display:inline-block; padding:12px 18px; text-decoration:none; font:700 .76rem/1.3 var(--mono); letter-spacing:.05em; text-transform:uppercase; border:1px solid var(--tan); }
+.button.primary { background:var(--red); border-color:var(--red); color:white; }
+.button.secondary { color:var(--paper); }
+.button:hover,.button:focus-visible { outline:2px solid var(--tan); outline-offset:3px; }
+</style>
