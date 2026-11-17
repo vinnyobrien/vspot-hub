@@ -1,5 +1,12 @@
 # The V Spot Network
-> Cross-Atlantic B2B media on ecommerce, retail, and AI. Written and produced by Vinny O'Brien (Tralee, Ireland / New York). Satirical on the surface, analyst-grade underneath.
+> Cross-Atlantic B2B media and independent consulting on ecommerce, retail, operations, marketplaces and AI. Written and produced by Vinny O'Brien (Tralee, Ireland / New York). Satirical on the surface, analyst-grade underneath.
+
+## Consulting
+- [E-commerce AI & Operations Consulting](https://thevspotnews.com/consulting/): Independent advice and project leadership for e-commerce brands, retailers and commerce SaaS teams across Europe and North America.
+- Focus areas: practical AI and automation; e-commerce operations; marketplace and cross-border commerce; project leadership; market analysis and operator insight for commerce SaaS.
+- Approach: understand the operating problem, prioritise by value and readiness, define a measurable project, and support delivery with the client team and appropriate specialists.
+- Vinny O'Brien is an independent consultant and analyst, not an AI software vendor.
+- [Book a call](https://thevspotnews.com/book/): consulting, SaaS analysis, sponsorship and speaking enquiries.
 
 ## Shows
 - [The Ostrich Report](https://thevspotnews.com/shows/ostrich-report/): Long-form editorial essays on ecommerce infrastructure, co-created with Hendrik Laubscher. Home of the EU de minimis series.
@@ -18,12 +25,12 @@
 - [Who Owns the Rails?](https://thevspotnews.com/vinland/who-owns-the-rails/): Part 4, on transatlantic investment, sovereignty and commerce infrastructure.
 
 ## About
-- [About Vinny O'Brien](https://thevspotnews.com/about/): 15+ years ecommerce operator (eBay, Arnotts), consultant to $100M+ brands, media founder.
+- [About Vinny O'Brien](https://thevspotnews.com/about/): E-commerce operator, consultant, analyst and media founder with 15+ years in the industry, including eBay and retail.
 
 ## Work with Vinny
-- [Book a call](https://thevspotnews.com/book/): consulting, sponsorship, and speaking enquiries, handled by his fictional agent Murt Moriarty.
-- [Be a guest](https://thevspotnews.com/guest/): apply to appear on The Struggle Bus or The Sunday Supplement.
-- [Now](https://thevspotnews.com/now/): what Vinny is currently working on, updated monthly.
+- [Book a call](https://thevspotnews.com/book/): Consulting, SaaS analysis, sponsorship and speaking enquiries.
+- [Be a guest](https://thevspotnews.com/guest/): Apply to appear on The Struggle Bus or The Sunday Supplement.
+- [Now](https://thevspotnews.com/now/): What Vinny is currently working on, updated monthly.
 
 ## Contact
 - vinny@vinnyandco.com
