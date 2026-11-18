@@ -1,0 +1,123 @@
+---
+import Base from '../layouts/Base.astro';
+const provenanceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How This Was Made",
+  "description": "The V Spot Provenance Standard: a role declaration and two measured numbers for human and AI contributions.",
+  "author": { "@type": "Person", "name": "Vinny O'Brien", "url": "https://thevspotnews.com/about/" },
+  "creator": { "@type": "Person", "name": "Vinny O'Brien", "url": "https://thevspotnews.com/about/" },
+  "copyrightHolder": { "@type": "Organization", "name": "The V Spot Network", "url": "https://thevspotnews.com/" },
+  "contributor": {
+    "@type": "Role",
+    "roleName": "Page assembly and implementation assistance",
+    "contributor": { "@type": "SoftwareApplication", "name": "ChatGPT" }
+  },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "propertyID": "IPTC:DigitalSourceType", "value": "https://cv.iptc.org/newscodes/digitalsourcetype/compositeSynthetic" },
+    { "@type": "PropertyValue", "propertyID": "vspot:textProvenance", "value": "Written" },
+    { "@type": "PropertyValue", "propertyID": "vspot:artefactProvenance", "value": "Assembled" }
+  ],
+  "datePublished": "2026-08-11",
+  "dateModified": "2026-11-18",
+  "mainEntityOfPage": "https://thevspotnews.com/provenance/"
+};
+---
+<Base title="How This Was Made · The V Spot Provenance Standard" description="How The V Spot declares human and AI contributions, revision delta and editorial direction." type="Article">
+  <script type="application/ld+json" set:html={JSON.stringify(provenanceJsonLd)} />
+  <main class="wrap provenance">
+    <header>
+      <p class="kicker">The V Spot Network · Editorial Standard 1.0</p>
+      <h1>How This <span>Was Made</span></h1>
+      <p class="standfirst">Every page on this network declares who did what. Not because a regulator asked nicely, but because the alternative is letting a detector answer the question on our behalf.</p>
+      <p class="edition">Published 11 August 2026 · Owner: Vinny O’Brien · Review every six months</p>
+    </header>
+
+    <section>
+      <p class="section-no">01 · The position</p>
+      <p class="lead">A machine can draft a sentence. It cannot decide the sentence is wrong for a Tuesday, kill the angle, ring the source back, or know that the Kerry reader and the Brooklyn reader need the same fact framed two different ways.</p>
+      <p>That judgement is the work. It is also the part that leaves no trace in a word count, which is why word counts are a terrible way to measure it.</p>
+      <p>So this network does not publish a single blended “percent human” figure. A blended figure is a marketing number pretending to be a forensic one. It invites an audit it cannot survive. What follows instead is a role declaration and two numbers that are actually measured.</p>
+    </section>
+
+    <section>
+      <p class="section-no">02 · The four tiers</p>
+      <p>Every piece carries one tier for its text and, where the piece is an illustrated art object or a video, a second tier for the artefact around the text. They are frequently different. Most VINLAND essays are <strong>Written</strong> text inside an <strong>Assembled</strong> object.</p>
+      <div class="tier-table" role="table" aria-label="Provenance tiers">
+        <div class="tier-row tier-head" role="row"><div role="columnheader">Tier</div><div role="columnheader">What it means</div></div>
+        <div class="tier-row" role="row"><strong>Written</strong><div>Composed by hand. A machine may have checked spelling, sources or structure, but did not produce prose that survived into the published text.</div></div>
+        <div class="tier-row" role="row"><strong>Rewritten</strong><div>Machine-drafted from human direction, then substantially rewritten. The published sentences are largely re-authored. Most opinion pieces land here.</div></div>
+        <div class="tier-row" role="row"><strong>Assembled</strong><div>Machine-compiled from sources the human selected, under human direction, human-checked before publication. Daily digests, data pulls, illustrated art objects and code-built pages.</div></div>
+        <div class="tier-row" role="row"><strong>Generated</strong><div>Machine output published with light human editing only. Rare, always labelled on the page, never used for reporting or for anything carrying a factual claim.</div></div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-no">03 · The two numbers</p>
+      <div class="metrics">
+        <article><h2>Revision delta</h2><p>The proportion of the published text that differs from the last machine draft, measured as a token-level diff. This is the honest floor. It says nothing about quality and everything about how much of the final artefact passed through a human hand.</p></article>
+        <article><h2>Direction count</h2><p>The number of steering interventions behind the piece: briefs written, angles rejected, facts corrected, structural calls made. This is the ceiling, and it is the actual authorship. A piece with a low revision delta and a high direction count is not lazy. It is well directed.</p></article>
+      </div>
+      <p>The two are published as a pair or not at all. Collapsing them into one figure destroys the only information they carry.</p>
+    </section>
+
+    <section>
+      <p class="section-no">04 · The machine-readable layer</p>
+      <p>Every V Spot page ships JSON-LD naming Vinny O’Brien as <code>creator</code>, <code>author</code> and <code>copyrightHolder</code>, and names any generative model as a <code>contributor</code> with its role stated. Source type follows the IPTC Digital Source Type vocabulary, the same controlled list that C2PA carries in its provenance manifests.</p>
+      <pre><code>{JSON.stringify({
+  "contributor": {
+    "@type": "Role",
+    "roleName": "Design, illustration and build assistance",
+    "contributor": { "@type": "SoftwareApplication", "name": "Claude" }
+  },
+  "additionalProperty": [
+    { "propertyID": "IPTC:DigitalSourceType", "value": "cv.iptc.org/newscodes/digitalsourcetype/compositeSynthetic" },
+    { "propertyID": "vspot:textProvenance", "value": "Written" },
+    { "propertyID": "vspot:artefactProvenance", "value": "Assembled" }
+  ]
+}, null, 2)}</code></pre>
+      <p>A matching stanza sits in each site’s <a href="/llms.txt">llms.txt</a>, because that file is where this network talks to crawlers directly rather than hoping they infer.</p>
+    </section>
+
+    <section>
+      <p class="section-no">05 · What a detector actually proves</p>
+      <p>Model watermarks are a smoke alarm, not a polygraph. A positive hit means text was processed by a model at some point, which includes proofreading, translation and summarising somebody else’s work. A negative result means nothing at all, since heavy editing degrades the signal. Neither outcome establishes authorship.</p>
+      <p>Which is precisely why the declaration is published rather than inferred. If someone runs a detector across this network and posts the screenshot, the answer is already here, dated, versioned, and considerably more specific than whatever the tool told them.</p>
+    </section>
+
+    <section>
+      <p class="section-no">06 · What this is not</p>
+      <p>It is not a legal opinion, and it is not a compliance certificate. The V Spot is an EU-based publisher with a North American readership, so it sits inside a disclosure regime that much of its audience does not, yet. Being early is cheaper than being retrofitted.</p>
+      <p>It is also not the product. Nobody ever subscribed for the provenance metadata. If this page becomes more interesting than the essays, something has gone badly wrong.</p>
+      <p>This standard applies to <a href="/">thevspotnews.com</a>, VINLAND art objects, The Ostrich Report and all network microsites. It is reviewed every six months.</p>
+    </section>
+
+    <section class="contact">
+      <p>Questions about how a particular piece was made? <a href="mailto:vinny@thevspotnews.com">Ask Vinny</a>. For our broader commitments on AI, data and editorial review, read the <a href="/ai-policy/">AI, data &amp; editorial policy</a>.</p>
+    </section>
+  </main>
+</Base>
+<style>
+.provenance { padding-top: 44px; padding-bottom: 84px; max-width: 980px; }
+.provenance header { padding: 24px 0 40px; border-bottom: 1px solid #343a58; margin-bottom: 20px; }
+.kicker,.section-no { font: 700 .75rem/1.5 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--tan); }
+.provenance h1 { font: clamp(3rem,8vw,6rem)/.98 var(--display); margin: 16px 0; }
+.provenance h1 span { color: #ff7c7e; }
+.standfirst { font-size: 1.35rem; line-height: 1.5; color: var(--tan); max-width: 850px; }
+.edition { font: .76rem/1.5 var(--mono); color: var(--grey); margin-top: 22px; }
+.provenance section { padding: 26px 0; border-bottom: 1px solid #343a58; }
+.provenance p { max-width: 82ch; color: #d0d1da; line-height: 1.75; }
+.provenance .lead { font: 1.35rem/1.55 var(--display); color: var(--paper); }
+.provenance a { color: var(--tan); text-underline-offset: 3px; }
+.provenance code { color: #f6c982; }
+.tier-table { margin-top: 20px; border: 1px solid #343a58; }
+.tier-row { display: grid; grid-template-columns: 150px 1fr; gap: 18px; padding: 15px 18px; border-top: 1px solid #343a58; color: #d0d1da; }
+.tier-row > :first-child { font-weight: 700; color: var(--paper); }
+.tier-head { border-top: 0; background: #12172d; font: 700 .72rem/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--tan); }
+.metrics { display: grid; grid-template-columns: repeat(auto-fit,minmax(270px,1fr)); gap: 14px; }
+.metrics article { background: #12172d; border: 1px solid #343a58; padding: 20px; }
+.metrics h2 { font: 1.25rem/1.25 var(--display); text-transform: uppercase; color: var(--tan); }
+pre { overflow-x: auto; padding: 18px; background: #090d1c; border: 1px solid #343a58; color: #dfe2eb; font: .82rem/1.6 var(--mono); white-space: pre; }
+.contact { border: 0 !important; margin-top: 18px; }
+@media(max-width:600px) { .tier-row { grid-template-columns: 1fr; gap: 6px; } }
+</style>
