@@ -14,11 +14,13 @@ import Base from '../layouts/Base.astro';
       </div>
     </header>
     <section>
-      <p class="grid-label">The first three talks</p>
+      <p class="grid-label">Essay-based talks · keynotes · conversations</p>
       <div class="talks">
-        <article><span class="number">01 / TECHNOLOGY &amp; PEOPLE</span><h2>Has technology outpaced the human need for it?</h2><p>AI and automation are moving quickly. The harder question is whether the tools are solving problems people actually have—or creating a very expensive new category of explanation.</p><p class="aside">For leadership teams, technology events and commerce conferences.</p></article>
-        <article><span class="number">02 / COMMERCE &amp; VALUE</span><h2>Friction as Currency</h2><p>We have spent years trying to remove friction from commerce. Some friction is waste; some is trust, discovery and choice. The challenge is knowing which is which before you optimise the humanity out of the experience.</p><p class="aside">For retail, ecommerce and customer-experience audiences.</p></article>
-        <article><span class="number">03 / PRACTICAL AI</span><h2>Before you add AI, diagnose the business</h2><p>When teams face sprawling platforms, overlapping licences and AI appearing in every menu, the answer is not another demo. Start with the real work, the cost and the customer problem; then decide what to automate.</p><p class="aside">For operators and teams responsible for transformation.</p></article>
+        <article><span class="number">01 / NATURAL HISTORY &amp; COMMERCE</span><h2>Two Million Years of Rain</h2><p>A summer dinosaur dig, the Carnian deluge and the inner ear of commerce lead to one unsettling question: do customers want to be tracked, or recognised? A talk about curiosity, belonging and the human signals technology keeps missing.</p><p class="aside">For leadership, marketing and technology audiences.</p><a class="essay-link" href="https://two-million-years-of-rain.netlify.app/">Read the essay →</a></article>
+        <article><span class="number">02 / INFRASTRUCTURE &amp; THE FUTURE</span><h2>Clinton’s Folly</h2><p>The Erie Canal was held together by the unglamorous work of engineers who walked the towpath and fixed the leaks. What Canvass White can teach us about building agentic commerce: less keynote theatre, more infrastructure that works.</p><p class="aside">For commerce, AI and technology conferences.</p><a class="essay-link" href="https://clintons-folly.netlify.app/">Read the essay →</a></article>
+        <article><span class="number">03 / TECHNOLOGY &amp; PEOPLE</span><h2>Has technology outpaced the human need for it?</h2><p>AI and automation are moving quickly. The harder question is whether the tools are solving problems people actually have—or creating a very expensive new category of explanation.</p><p class="aside">For leadership teams, technology events and commerce conferences.</p></article>
+        <article><span class="number">04 / COMMERCE &amp; VALUE</span><h2>Friction as Currency</h2><p>We have spent years trying to remove friction from commerce. Some friction is waste; some is trust, discovery and choice. The challenge is knowing which is which before you optimise the humanity out of the experience.</p><p class="aside">For retail, ecommerce and customer-experience audiences.</p></article>
+        <article><span class="number">05 / PRACTICAL AI</span><h2>Before you add AI, diagnose the business</h2><p>When teams face sprawling platforms, overlapping licences and AI appearing in every menu, the answer is not another demo. Start with the real work, the cost and the customer problem; then decide what to automate.</p><p class="aside">For operators and teams responsible for transformation.</p></article>
       </div>
     </section>
     <section class="host-options">
@@ -48,6 +50,8 @@ import Base from '../layouts/Base.astro';
 .talks h2 { font: 1.5rem/1.2 var(--display); margin: 14px 0; }
 .talks p { color: #d0d1da; }
 .talks .aside { color: var(--grey); font-size: .9rem; margin-top: 12px; }
+.essay-link { display: inline-block; margin-top: 8px; color: var(--tan); font: 700 .76rem/1.4 var(--mono); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.essay-link:hover,.essay-link:focus-visible { color: #ff7c7e; }
 .host-options { margin-top: 64px; padding: 28px; background: #11162d; border-left: 3px solid var(--red); }
 .host-options h2 { font: 2rem/1.2 var(--display); margin: 12px 0; }
 .host-options p { max-width: 780px; color: #d0d1da; margin: 10px 0; }

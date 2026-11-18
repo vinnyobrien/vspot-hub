@@ -24,6 +24,22 @@
 - [The Map Beneath the Cloud](https://thevspotnews.com/vinland/map-beneath-cloud/): Part 3, on the physical geography beneath AI.
 - [Who Owns the Rails?](https://thevspotnews.com/vinland/who-owns-the-rails/): Part 4, on transatlantic investment, sovereignty and commerce infrastructure.
 
+## Speaking
+- [Keynotes & event hosting](https://thevspotnews.com/speaking/): Essay-based talks on recognition, customer humanity, infrastructure and agentic commerce.
+- [Two Million Years of Rain](https://two-million-years-of-rain.netlify.app/): Natural history and commerce; recognition over tracking.
+- [Clinton’s Folly](https://clintons-folly.netlify.app/): Erie Canal engineering as a guide to building agentic commerce infrastructure.
+
+## Editorial transparency
+- [How This Was Made](https://thevspotnews.com/provenance/): The V Spot’s provenance standard for human and AI contributions, revision delta and direction count.
+- [AI, data & editorial policy](https://thevspotnews.com/ai-policy/): How the network uses AI, protects information and keeps people responsible for published work.
+
+### Provenance declaration for /provenance/
+- Author, creator and copyright holder: Vinny O'Brien / The V Spot Network.
+- Generative contributor: ChatGPT — page assembly and implementation assistance.
+- IPTC Digital Source Type: compositeSynthetic.
+- vspot:textProvenance: Written.
+- vspot:artefactProvenance: Assembled.
+
 ## About
 - [About Vinny O'Brien](https://thevspotnews.com/about/): E-commerce operator, consultant, analyst and media founder with 15+ years in the industry, including eBay and retail.
 
