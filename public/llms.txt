@@ -33,6 +33,13 @@
 - [How This Was Made](https://thevspotnews.com/provenance/): The V Spot’s provenance standard for human and AI contributions, revision delta and direction count.
 - [AI, data & editorial policy](https://thevspotnews.com/ai-policy/): How the network uses AI, protects information and keeps people responsible for published work.
 
+### Provenance declaration for /provenance/
+- Author, creator and copyright holder: Vinny O'Brien / The V Spot Network.
+- Generative contributor: ChatGPT — page assembly and implementation assistance.
+- IPTC Digital Source Type: compositeSynthetic.
+- vspot:textProvenance: Written.
+- vspot:artefactProvenance: Assembled.
+
 ## About
 - [About Vinny O'Brien](https://thevspotnews.com/about/): E-commerce operator, consultant, analyst and media founder with 15+ years in the industry, including eBay and retail.
 
