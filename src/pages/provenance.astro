@@ -29,7 +29,7 @@ const provenanceJsonLd = {
     <header>
       <p class="kicker">The V Spot Network · Editorial Standard 1.0</p>
       <h1>How This <span>Was Made</span></h1>
-      <p class="standfirst">Every page on this network declares who did what. Not because a regulator asked nicely, but because the alternative is letting a detector answer the question on our behalf.</p>
+      <p class="standfirst">The standard for every page on this network is a clear declaration of who did what. Not because a regulator asked nicely, but because the alternative is letting a detector answer the question on our behalf.</p>
       <p class="edition">Published 11 August 2026 · Owner: Vinny O’Brien · Review every six months</p>
     </header>
 
@@ -63,7 +63,7 @@ const provenanceJsonLd = {
 
     <section>
       <p class="section-no">04 · The machine-readable layer</p>
-      <p>Every V Spot page ships JSON-LD naming Vinny O’Brien as <code>creator</code>, <code>author</code> and <code>copyrightHolder</code>, and names any generative model as a <code>contributor</code> with its role stated. Source type follows the IPTC Digital Source Type vocabulary, the same controlled list that C2PA carries in its provenance manifests.</p>
+      <p>Each V Spot page should carry JSON-LD naming Vinny O’Brien as <code>creator</code>, <code>author</code> and <code>copyrightHolder</code>, and name any generative model as a <code>contributor</code> with its role stated. This page carries its own declaration below. Source type follows the IPTC Digital Source Type vocabulary, the same controlled list that C2PA carries in its provenance manifests.</p>
       <pre><code>{JSON.stringify({
   "contributor": {
     "@type": "Role",
@@ -76,7 +76,7 @@ const provenanceJsonLd = {
     { "propertyID": "vspot:artefactProvenance", "value": "Assembled" }
   ]
 }, null, 2)}</code></pre>
-      <p>A matching stanza sits in each site’s <a href="/llms.txt">llms.txt</a>, because that file is where this network talks to crawlers directly rather than hoping they infer.</p>
+      <p>A matching stanza for this page sits in the network’s <a href="/llms.txt">llms.txt</a>, because that file is where we talk to crawlers directly rather than hoping they infer. Other pages carry their own role-specific declarations as this standard is applied across the archive.</p>
     </section>
 
     <section>
