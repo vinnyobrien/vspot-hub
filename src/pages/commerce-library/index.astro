@@ -1,0 +1,126 @@
+---
+import Base from '../../layouts/Base.astro';
+import { regions } from '../../data/vinland.js';
+import bodies from '../../data/essay-bodies.json';
+
+const articles = regions.flatMap((region) =>
+  region.essays
+    .filter((essay) => Boolean(bodies[essay.slug]?.html) || Boolean(essay.url))
+    .map((essay) => ({ ...essay, region: region.name, href: essay.url || `/vinland/${essay.slug}/` }))
+);
+
+const bySlug = Object.fromEntries(articles.map((article) => [article.slug, article]));
+const sections = [
+  {
+    question: 'Should my business sell through a marketplace?',
+    answer: 'A marketplace can bring reach and demand, but it also changes the economics and the customer relationship. Start with the job you need the marketplace to do, then weigh the reach against margin, control and dependence.',
+    slugs: ['everything-you-think-about-marketplaces', 'not-all-marketplaces-are-equal', 'an-underestimated-icon'],
+  },
+  {
+    question: 'Does making commerce more efficient always make it better?',
+    answer: 'No. Removing unnecessary effort can help, but speed is not the same thing as value. Some friction helps people discover, compare and choose; the useful question is which friction serves the customer and which is just bad plumbing.',
+    slugs: ['the-seduction-of-efficiency', 'slowing-down-to-go-fast'],
+  },
+  {
+    question: 'What should be ready before a retailer bets on agentic commerce?',
+    answer: 'An agent still needs dependable products, prices, inventory, policies and systems to act on. The conversation can move to an AI interface; the operating work underneath does not disappear just because the shopper has outsourced the clicking.',
+    slugs: ['the-agentic-sunrise', 'llms-ate-the-search-bar', 'to-ai-cause-and-solution', 'arming-the-rebels'],
+  },
+  {
+    question: 'How should a retailer think about cross-border growth?',
+    answer: 'Treat each region as a market with its own platforms, logistics, rules and customer habits. A playbook that travels well from the US may still need a serious rewrite for the UK or EU.',
+    slugs: ['international-growth-is-sexy', 'my-united-states-of-whatever', 'woocommerce-shopify-lbd-of-the-eu', 'the-amazon-ireland-meet-cute'],
+  },
+  {
+    question: 'What do commerce numbers actually tell us?',
+    answer: 'A headline metric rarely explains the whole market. Read the underlying measure, its context and who benefits from the way it is framed before turning it into a strategy.',
+    slugs: ['uk-retail-index-data-and-delusion', 'what-does-238bn-buy-you', 'show-me-the-money'],
+  },
+  {
+    question: 'What does good commerce work look like for the people doing it?',
+    answer: 'The operating model is made of people as well as platforms. The unglamorous work, the judgment calls and the handoffs are part of the system—and often where the customer experience is won or lost.',
+    slugs: ['the-joy-of-putting-the-work-in', 'the-cost-of-caring', 'they-went-with-someone'],
+  },
+];
+const collectionJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'The V Spot Commerce Library',
+  url: 'https://thevspotnews.com/commerce-library/',
+  description: 'Answers and original analysis on e-commerce, retail, marketplaces, agentic commerce and the people doing the work.',
+  author: { '@type': 'Person', name: "Vinny O'Brien", url: 'https://thevspotnews.com/about/' },
+  publisher: { '@type': 'Organization', name: 'The V Spot Network', url: 'https://thevspotnews.com' },
+};
+---
+<Base title="E-commerce Answers & Analysis | The V Spot Commerce Library" description="Practical, independent answers on e-commerce, marketplaces, agentic commerce, cross-border growth and retail operations, drawn from The V Spot's original reporting and essays." type="CollectionPage">
+  <main class="wrap library">
+    <header class="library-hero">
+      <p class="kicker">The V Spot · Commerce Library</p>
+      <h1>Commerce is messy.<br /><span>Good answers should say so.</span></h1>
+      <p class="library-lede">Independent answers and sharp analysis on the questions commerce teams are actually dealing with, drawn from the work of Vinny O'Brien and The V Spot Network.</p>
+      <p class="library-note">Operator experience, original essays and conversations from both sides of the Atlantic. No magic playbooks. A few useful maps.</p>
+    </header>
+
+    <nav class="library-index" aria-label="Commerce topics">
+      {sections.map((section, index) => (
+        <a href={`#topic-${index + 1}`}>{section.question}</a>
+      ))}
+    </nav>
+
+    <div class="library-topics">
+      {sections.map((section, index) => {
+        const related = section.slugs.map((slug) => bySlug[slug]).filter(Boolean);
+        return (
+          <section class="topic" id={`topic-${index + 1}`}>
+            <p class="topic-label">Field note · {String(index + 1).padStart(2, '0')}</p>
+            <h2>{section.question}</h2>
+            <p class="answer">{section.answer}</p>
+            <h3>Read the stories</h3>
+            <ul>
+              {related.map((article) => (
+                <li>
+                  <a href={article.href}>{article.title}</a>
+                  <span>{article.teaser}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        );
+      })}
+    </div>
+
+    <section class="library-about">
+      <h2>A living library, built from the work</h2>
+      <p>New episodes, interviews and essays will add to these topics over time. Each link leads to the original story, so you can follow the argument back to its source.</p>
+      <p>For the weekly news, satire and conversations, visit <a href="/shows/nearly-news/">Nearly News</a>, <a href="/shows/ostrich-report/">The Ostrich Report</a> and <a href="/shows/struggle-bus/">The Struggle Bus</a>. To talk through a commerce challenge, <a href="/book/">book a conversation</a>.</p>
+    </section>
+  </main>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(collectionJsonLd)} />
+</Base>
+
+<style>
+  .library { padding-top: 48px; padding-bottom: 88px; }
+  .library-hero { max-width: 850px; padding: 24px 0 30px; }
+  .library-hero h1 { max-width: 780px; margin: 0; color: var(--paper, #F3F1EC); font-family: var(--display); font-size: clamp(2.6rem, 7vw, 5.2rem); line-height: .98; }
+  .library-hero h1 span { color: var(--red, #E8272A); }
+  .library-lede { max-width: 680px; margin: 24px 0 12px; color: #e5e5e8; font-size: 1.25rem; line-height: 1.6; }
+  .library-note { max-width: 640px; color: var(--grey, #A0A0A0); font-size: 1rem; line-height: 1.6; }
+  .library-index { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 10px; margin: 18px 0 52px; }
+  .library-index a { display: block; border: 1px solid #303550; border-left: 3px solid var(--red, #E8272A); padding: 14px 16px; color: var(--paper, #F3F1EC); font-size: 1rem; line-height: 1.45; text-decoration: none; }
+  .library-index a:hover { border-color: var(--tan, #D2B48C); color: var(--tan, #D2B48C); }
+  .library-topics { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 22px; }
+  .topic { scroll-margin-top: 30px; padding: 26px; border: 1px solid #303550; background: rgba(10, 10, 20, .38); }
+  .topic-label { margin: 0 0 14px; color: var(--tan, #D2B48C); font-family: var(--mono); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; }
+  .topic h2 { margin: 0 0 14px; color: var(--paper, #F3F1EC); font-family: var(--display); font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.12; }
+  .topic .answer { color: #d0d2dc; font-size: 1.05rem; line-height: 1.7; }
+  .topic h3 { margin: 26px 0 10px; color: var(--tan, #D2B48C); font-family: var(--mono); font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; }
+  .topic ul { margin: 0; padding: 0; list-style: none; }
+  .topic li { padding: 13px 0; border-top: 1px solid #303550; }
+  .topic li a { display: block; color: var(--paper, #F3F1EC); font-size: 1.05rem; font-weight: 600; text-decoration-color: var(--red, #E8272A); text-underline-offset: 4px; }
+  .topic li span { display: block; margin-top: 6px; color: var(--grey, #A0A0A0); font-size: .94rem; line-height: 1.5; }
+  .library-about { max-width: 760px; margin: 58px auto 0; padding: 28px; border-top: 2px solid var(--red, #E8272A); background: #111426; }
+  .library-about h2 { margin-top: 0; color: var(--paper, #F3F1EC); font-family: var(--display); font-size: 1.8rem; }
+  .library-about p { color: #c9cdd8; font-size: 1rem; line-height: 1.65; }
+  .library-about a { color: var(--tan, #D2B48C); }
+  @media (max-width: 600px) { .library { padding-top: 30px; } .topic { padding: 20px; } }
+</style>
