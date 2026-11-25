@@ -1,6 +1,16 @@
 # The V Spot Network
 > Cross-Atlantic B2B media and independent consulting on ecommerce, retail, operations, marketplaces and AI. Written and produced by Vinny O'Brien (Tralee, Ireland / New York). Satirical on the surface, analyst-grade underneath.
 
+## Commerce Library
+- [The V Spot Commerce Library](https://thevspotnews.com/commerce-library/): Question-led answers and original analysis on marketplaces, efficiency, agentic commerce, cross-border growth, retail performance and the people doing the work.
+- [Should my business sell through a marketplace?](https://thevspotnews.com/vinland/everything-you-think-about-marketplaces/): Reach, economics, control and dependence in marketplace strategy.
+- [What should be ready before a retailer bets on agentic commerce?](https://thevspotnews.com/vinland/the-agentic-sunrise/): How the role of software changes when the shopper sends an agent.
+- [What happens when LLMs become the search bar?](https://thevspotnews.com/vinland/llms-ate-the-search-bar/): The shift from search-led product discovery to conversational interfaces.
+- [Does making commerce more efficient always make it better?](https://thevspotnews.com/vinland/the-seduction-of-efficiency/): What optimisation can quietly remove from the customer and operator experience.
+- [How should a retailer think about cross-border growth?](https://thevspotnews.com/vinland/international-growth-is-sexy/): The operational and commercial realities behind international expansion.
+- [What do commerce numbers actually tell us?](https://thevspotnews.com/vinland/uk-retail-index-data-and-delusion/): Reading retail data in context rather than repeating the headline.
+- [The V Spot's published stories](https://thevspotnews.com/vinland/): Browse the original essays and their source material by topic.
+
 ## Consulting
 - [E-commerce AI & Operations Consulting](https://thevspotnews.com/consulting/): Independent advice and project leadership for e-commerce brands, retailers and commerce SaaS teams across Europe and North America.
 - Focus areas: practical AI and automation; e-commerce operations; marketplace and cross-border commerce; project leadership; market analysis and operator insight for commerce SaaS.
@@ -14,7 +24,7 @@
 - [Nearly News](https://thevspotnews.com/shows/nearly-news/): Weekly satirical ecommerce video news.
 
 ## Frameworks
-- Friction as Currency: the argument that removing all friction from commerce destroys value.
+- Friction as Currency: the argument that removing all friction from commerce destroys value with it. Some friction is the product.
 - THOUGHT/COMMERCIAL grid: governance framework for evaluating media and consulting projects.
 - Cross-Atlantic lens: reading EU commerce developments through a North American frame, and vice versa.
 
@@ -23,6 +33,7 @@
 - [The Compute Tithe](https://thevspotnews.com/vinland/compute-tithe/): Part 2, on AI capital expenditure, debt and infrastructure cycles.
 - [The Map Beneath the Cloud](https://thevspotnews.com/vinland/map-beneath-cloud/): Part 3, on the physical geography beneath AI.
 - [Who Owns the Rails?](https://thevspotnews.com/vinland/who-owns-the-rails/): Part 4, on transatlantic investment, sovereignty and commerce infrastructure.
+- [Arming the Rebels](https://thevspotnews.com/stories/arming-the-rebels/): A comic, personal map of commerce software, enterprise complexity and the agents arriving to inherit the rules.
 
 ## Speaking
 - [Keynotes & event hosting](https://thevspotnews.com/speaking/): Essay-based talks on recognition, customer humanity, infrastructure and agentic commerce.
@@ -33,15 +44,8 @@
 - [How This Was Made](https://thevspotnews.com/provenance/): The V Spot’s provenance standard for human and AI contributions, revision delta and direction count.
 - [AI, data & editorial policy](https://thevspotnews.com/ai-policy/): How the network uses AI, protects information and keeps people responsible for published work.
 
-### Provenance declaration for /provenance/
-- Author, creator and copyright holder: Vinny O'Brien / The V Spot Network.
-- Generative contributor: ChatGPT — page assembly and implementation assistance.
-- IPTC Digital Source Type: compositeSynthetic.
-- vspot:textProvenance: Written.
-- vspot:artefactProvenance: Assembled.
-
 ## About
-- [About Vinny O'Brien](https://thevspotnews.com/about/): E-commerce operator, consultant, analyst and media founder with 15+ years in the industry, including eBay and retail.
+- [About Vinny O’Brien](https://thevspotnews.com/about/): E-commerce operator, consultant, analyst and media founder with 15+ years in the industry, including eBay and retail.
 
 ## Work with Vinny
 - [Book a call](https://thevspotnews.com/book/): Consulting, SaaS analysis, sponsorship and speaking enquiries.
