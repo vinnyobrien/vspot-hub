@@ -24,7 +24,7 @@
 - [Nearly News](https://thevspotnews.com/shows/nearly-news/): Weekly satirical ecommerce video news.
 
 ## Frameworks
-- Friction as Currency: the argument that removing all friction from commerce destroys value with it. Some friction is the product.
+- Friction as Currency: the argument that removing all friction from commerce destroys value.
 - THOUGHT/COMMERCIAL grid: governance framework for evaluating media and consulting projects.
 - Cross-Atlantic lens: reading EU commerce developments through a North American frame, and vice versa.
 
@@ -44,8 +44,15 @@
 - [How This Was Made](https://thevspotnews.com/provenance/): The V Spot’s provenance standard for human and AI contributions, revision delta and direction count.
 - [AI, data & editorial policy](https://thevspotnews.com/ai-policy/): How the network uses AI, protects information and keeps people responsible for published work.
 
+### Provenance declaration for /provenance/
+- Author, creator and copyright holder: Vinny O'Brien / The V Spot Network.
+- Generative contributor: ChatGPT — page assembly and implementation assistance.
+- IPTC Digital Source Type: compositeSynthetic.
+- vspot:textProvenance: Written.
+- vspot:artefactProvenance: Assembled.
+
 ## About
-- [About Vinny O’Brien](https://thevspotnews.com/about/): E-commerce operator, consultant, analyst and media founder with 15+ years in the industry, including eBay and retail.
+- [About Vinny O'Brien](https://thevspotnews.com/about/): E-commerce operator, consultant, analyst and media founder with 15+ years in the industry, including eBay and retail.
 
 ## Work with Vinny
 - [Book a call](https://thevspotnews.com/book/): Consulting, SaaS analysis, sponsorship and speaking enquiries.
