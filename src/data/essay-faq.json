@@ -1,0 +1,106 @@
+{
+  "the-seduction-of-efficiency": [
+    "Who benefits when it gets easier to launch an app?",
+    "An app store gains another listing the moment a developer ships. The developer still has to give someone a reason to come back tomorrow. Retention and sustainable income reveal more about that bargain than launch volume."
+  ],
+  "slowing-down-to-go-fast": [
+    "Why slow down an interview with an e-commerce leader?",
+    "Giving guests time to tell the story behind a decision brings out pressures and doubts that disappear from the polished career summary. That is where the Struggle Bus conversation finds its empathy."
+  ],
+  "everything-you-think-about-marketplaces": [
+    "What does a seller miss by treating marketplaces as interchangeable?",
+    "A platform’s reach tells you little about which shoppers it attracts or what it costs to serve them. Compare the role each channel plays in your business before comparing its sales figures."
+  ],
+  "not-all-marketplaces-are-equal": [
+    "When does a retailer have a reason to build a marketplace?",
+    "Adding sellers makes sense when their range gives customers a reason to shop there and gives sellers access to real demand. A bigger catalogue alone settles neither question."
+  ],
+  "an-underestimated-icon": [
+    "What does eBay risk losing in a makeover?",
+    "The Clueless analogy turns on Tai’s appeal before anyone tries to improve her. For eBay, the equivalent is the community of buyers and sellers who come for things they cannot reliably find elsewhere."
+  ],
+  "the-joy-of-putting-the-work-in": [
+    "What does Scott Lux’s musical outlook bring to commerce leadership?",
+    "Lux describes a craft learned through practice and listening. His story gives teams a way to think about technology and storytelling together, as skills people develop over time."
+  ],
+  "the-cost-of-caring": [
+    "What can caring about a business cost its leaders?",
+    "Nick Kaplan’s account of building and starting again shows how closely a leader’s sense of responsibility can become tied to the people involved. A business setback can carry a personal cost long after the decision is made."
+  ],
+  "international-growth-is-sexy": [
+    "What belongs in an international expansion plan before launch?",
+    "The Avalara-sponsored essay puts tax, customs and landed cost inside the commercial plan. Work through a sample order all the way to delivery before promising a price or delivery date."
+  ],
+  "my-united-states-of-whatever": [
+    "What makes a cross-border checkout feel local?",
+    "Show shoppers what they will actually pay and account for local buying habits. Translating a US storefront leaves the hardest questions unanswered if the final bill still comes as a surprise."
+  ],
+  "woocommerce-shopify-lbd-of-the-eu": [
+    "What can European platform adoption figures tell a retailer?",
+    "The essay uses Tembi’s platform data to ask where WooCommerce and Shopify are common and where local alternatives matter. A regional total is a starting point for investigating the market you intend to serve."
+  ],
+  "the-amazon-ireland-meet-cute": [
+    "What changed when Amazon opened an Irish storefront?",
+    "Irish consumers already knew Amazon. The essay frames the launch as a change in an existing relationship and asks what a local offer and delivery experience would mean for shoppers and retailers."
+  ],
+  "uk-retail-index-data-and-delusion": [
+    "What tensions does Adyen’s UK retail index reveal?",
+    "Vinny reads the 2025 index through the gap between what retailers promise and what customers experience, particularly when personalisation depends on collecting more data or ethical commitments put pressure on margins."
+  ],
+  "to-ai-cause-and-solution": [
+    "Why compare commerce’s talk about AI to The Simpsons?",
+    "The joke about something being both the cause and the solution captures the industry’s circular pitch. Ask which specific problem the proposed tool solves and how that problem arose."
+  ],
+  "llms-ate-the-search-bar": [
+    "How can a product answer a shopper’s question in conversational search?",
+    "Max Sinclair’s discussion uses the example of a desk with a drawer that may obstruct a clamp. A listing that explains fit and clearance helps answer a real buying question that a category keyword misses."
+  ],
+  "the-agentic-sunrise": [
+    "What changes when software helps the shopper choose?",
+    "The Agentic Sunrise considers how discovery and choice move into an interactive service. Merchants need to understand what the intermediary can see about their offer and which parts of the customer relationship they still control."
+  ],
+  "what-does-238bn-buy-you": [
+    "What does the scale of Singles’ Day 2025 tell us?",
+    "The episode uses the headline figure to explore the event as a feat of fulfilment and marketplace coordination. Its scale makes more sense alongside the infrastructure that lets merchants deliver the orders."
+  ],
+  "show-me-the-money": [
+    "How should a retailer assess revenue from messaging channels?",
+    "This Omnisend feature looks at what different channels contribute to sales. Start with the customer action each message is meant to prompt, then look at revenue alongside the number of messages sent."
+  ],
+  "they-went-with-someone": [
+    "How do younger DTC founders approach brand building?",
+    "The essay contrasts generational approaches in the UK and US. Its younger founders put themselves on camera and develop a public voice while building the business."
+  ],
+  "two-million-years-of-rain": [
+    "What is the difference between recognising a customer and tracking one?",
+    "The essay asks what makes someone feel known or welcome. A brand can accumulate behavioural data while still missing the human detail that would make an interaction feel personal."
+  ],
+  "clintons-folly": [
+    "What does Dave Finnegan’s career suggest about innovation?",
+    "The conversation traces ideas back to people, chance encounters and careful listening. Empathy matters because understanding someone’s experience can change what a team decides to build."
+  ],
+  "weather-permitting": [
+    "How much can the weather explain about UK retail results?",
+    "The essay sets weather commentary beside earnings, online activity and payment infrastructure. Weather can explain a difficult trading week while leaving a lasting shift in where customers spend unexplored."
+  ],
+  "reformation-of-compute": [
+    "How do open models change who has authority over AI?",
+    "When users cannot inspect a system, they rely on its owners to interpret what it does. Open weights give others more room to examine and adapt a model, even as hardware remains concentrated."
+  ],
+  "compute-tithe": [
+    "Can AI infrastructure be valuable even if its investors lose money?",
+    "Yes. Debt and long-term leases can leave investors exposed when revenue disappoints, while the physical capacity they financed remains useful to later operators."
+  ],
+  "map-beneath-cloud": [
+    "What physical constraints sit behind the AI cloud?",
+    "Compute depends on chips, electricity, cooling water, land and cables. Their location determines who can supply capacity, who can withhold it and which communities carry its costs."
+  ],
+  "who-owns-the-rails": [
+    "Why do European and American observers read the same AI boom differently?",
+    "The essay links their outlooks to ownership and exposure. Merchants can apply the same question to payments and distribution by asking who owns the infrastructure they rely on."
+  ],
+  "arming-the-rebels": [
+    "Who sets the rules when commerce software becomes infrastructure?",
+    "Arming the Rebels follows the shift from tools that helped merchants challenge incumbents to platforms that decide who participates. An agent inherits those commercial rules along with its technical instructions."
+  ]
+}
