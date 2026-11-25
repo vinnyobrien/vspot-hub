@@ -1,4 +1,5 @@
 ---
+import faqs from '../../data/essay-faq.json';
 import Base from '../../layouts/Base.astro';
 import { regions } from '../../data/vinland.js';
 // Bodies published from the cockpit. Kept separate from vinland.js so the
@@ -33,6 +34,7 @@ const siblings = region.essays.filter(e => e.slug !== essay.slug);
     <h1>{essay.title}</h1>
     <p class="standfirst">{essay.teaser}</p>
 
+    {hasBody && faqs[essay.slug] && <section id="faq"><p class="kicker">Essay FAQ</p><h2>{faqs[essay.slug][0]}</h2><p>{faqs[essay.slug][1]}</p></section>}
     {hero && (
       <figure class="essayhero">
         <img src={hero} alt={published.heroAlt || ''} loading="lazy" />

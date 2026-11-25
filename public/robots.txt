@@ -2,6 +2,10 @@
 User-agent: *
 Allow: /
 
+# ChatGPT Search discovery (separate from training crawler preferences).
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 User-agent: ClaudeBot

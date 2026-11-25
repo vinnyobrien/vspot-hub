@@ -1,6 +1,16 @@
 # The V Spot Network
 > Cross-Atlantic B2B media and independent consulting on ecommerce, retail, operations, marketplaces and AI. Written and produced by Vinny O'Brien (Tralee, Ireland / New York). Satirical on the surface, analyst-grade underneath.
 
+## Commerce Library
+- [The V Spot Commerce Library](https://thevspotnews.com/commerce-library/): Question-led answers and original analysis on marketplaces, efficiency, agentic commerce, cross-border growth, retail performance and the people doing the work.
+- [Should my business sell through a marketplace?](https://thevspotnews.com/vinland/everything-you-think-about-marketplaces/): Reach, economics, control and dependence in marketplace strategy.
+- [What should be ready before a retailer bets on agentic commerce?](https://thevspotnews.com/vinland/the-agentic-sunrise/): How the role of software changes when the shopper sends an agent.
+- [What happens when LLMs become the search bar?](https://thevspotnews.com/vinland/llms-ate-the-search-bar/): The shift from search-led product discovery to conversational interfaces.
+- [Does making commerce more efficient always make it better?](https://thevspotnews.com/vinland/the-seduction-of-efficiency/): What optimisation can quietly remove from the customer and operator experience.
+- [How should a retailer think about cross-border growth?](https://thevspotnews.com/vinland/international-growth-is-sexy/): The operational and commercial realities behind international expansion.
+- [What do commerce numbers actually tell us?](https://thevspotnews.com/vinland/uk-retail-index-data-and-delusion/): Reading retail data in context rather than repeating the headline.
+- [The V Spot's published stories](https://thevspotnews.com/vinland/): Browse the original essays and their source material by topic.
+
 ## Consulting
 - [E-commerce AI & Operations Consulting](https://thevspotnews.com/consulting/): Independent advice and project leadership for e-commerce brands, retailers and commerce SaaS teams across Europe and North America.
 - Focus areas: practical AI and automation; e-commerce operations; marketplace and cross-border commerce; project leadership; market analysis and operator insight for commerce SaaS.
@@ -23,6 +33,7 @@
 - [The Compute Tithe](https://thevspotnews.com/vinland/compute-tithe/): Part 2, on AI capital expenditure, debt and infrastructure cycles.
 - [The Map Beneath the Cloud](https://thevspotnews.com/vinland/map-beneath-cloud/): Part 3, on the physical geography beneath AI.
 - [Who Owns the Rails?](https://thevspotnews.com/vinland/who-owns-the-rails/): Part 4, on transatlantic investment, sovereignty and commerce infrastructure.
+- [Arming the Rebels](https://thevspotnews.com/stories/arming-the-rebels/): A comic, personal map of commerce software, enterprise complexity and the agents arriving to inherit the rules.
 
 ## Speaking
 - [Keynotes & event hosting](https://thevspotnews.com/speaking/): Essay-based talks on recognition, customer humanity, infrastructure and agentic commerce.
@@ -50,3 +61,31 @@
 
 ## Contact
 - vinny@vinnyandco.com
+
+## Essay FAQs
+- [Who benefits when it gets easier to launch an app?](https://thevspotnews.com/vinland/the-seduction-of-efficiency/#faq)
+- [Why slow down an interview with an e-commerce leader?](https://thevspotnews.com/vinland/slowing-down-to-go-fast/#faq)
+- [What does a seller miss by treating marketplaces as interchangeable?](https://thevspotnews.com/vinland/everything-you-think-about-marketplaces/#faq)
+- [When does a retailer have a reason to build a marketplace?](https://thevspotnews.com/vinland/not-all-marketplaces-are-equal/#faq)
+- [What does eBay risk losing in a makeover?](https://thevspotnews.com/vinland/an-underestimated-icon/#faq)
+- [What does Scott Lux’s musical outlook bring to commerce leadership?](https://thevspotnews.com/vinland/the-joy-of-putting-the-work-in/#faq)
+- [What can caring about a business cost its leaders?](https://thevspotnews.com/vinland/the-cost-of-caring/#faq)
+- [What belongs in an international expansion plan before launch?](https://thevspotnews.com/vinland/international-growth-is-sexy/#faq)
+- [What makes a cross-border checkout feel local?](https://thevspotnews.com/vinland/my-united-states-of-whatever/#faq)
+- [What can European platform adoption figures tell a retailer?](https://thevspotnews.com/vinland/woocommerce-shopify-lbd-of-the-eu/#faq)
+- [What changed when Amazon opened an Irish storefront?](https://thevspotnews.com/vinland/the-amazon-ireland-meet-cute/#faq)
+- [What tensions does Adyen’s UK retail index reveal?](https://thevspotnews.com/vinland/uk-retail-index-data-and-delusion/#faq)
+- [Why compare commerce’s talk about AI to The Simpsons?](https://thevspotnews.com/vinland/to-ai-cause-and-solution/#faq)
+- [How can a product answer a shopper’s question in conversational search?](https://thevspotnews.com/vinland/llms-ate-the-search-bar/#faq)
+- [What changes when software helps the shopper choose?](https://thevspotnews.com/vinland/the-agentic-sunrise/#faq)
+- [What does the scale of Singles’ Day 2025 tell us?](https://thevspotnews.com/vinland/what-does-238bn-buy-you/#faq)
+- [How should a retailer assess revenue from messaging channels?](https://thevspotnews.com/vinland/show-me-the-money/#faq)
+- [How do younger DTC founders approach brand building?](https://thevspotnews.com/vinland/they-went-with-someone/#faq)
+- [What is the difference between recognising a customer and tracking one?](https://thevspotnews.com/vinland/two-million-years-of-rain/#faq)
+- [What does Dave Finnegan’s career suggest about innovation?](https://thevspotnews.com/vinland/clintons-folly/#faq)
+- [How much can the weather explain about UK retail results?](https://thevspotnews.com/vinland/weather-permitting/#faq)
+- [How do open models change who has authority over AI?](https://thevspotnews.com/vinland/reformation-of-compute/#faq)
+- [Can AI infrastructure be valuable even if its investors lose money?](https://thevspotnews.com/vinland/compute-tithe/#faq)
+- [What physical constraints sit behind the AI cloud?](https://thevspotnews.com/vinland/map-beneath-cloud/#faq)
+- [Why do European and American observers read the same AI boom differently?](https://thevspotnews.com/vinland/who-owns-the-rails/#faq)
+- [Who sets the rules when commerce software becomes infrastructure?](https://thevspotnews.com/stories/arming-the-rebels/#faq)
